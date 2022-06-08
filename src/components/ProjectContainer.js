@@ -11,7 +11,6 @@ export default function ProjectContainer({projects}){
         <div>
             <h1>Projects</h1>
             {projectCards}
-            <button>Add new Project</button>
         </div>
     )
 }
