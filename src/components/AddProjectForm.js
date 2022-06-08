@@ -9,23 +9,35 @@ export default function AddProjectForm(){
         
         <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
+    <Form.Label>Project Name</Form.Label>
+    <Form.Control type="email" placeholder="Enter Project Name" />
     <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
+      Give your project a memorable, but informative name!
     </Form.Text>
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
+    <Form.Label>Who is Creating this Project?</Form.Label>
+    <Form.Control type="password" placeholder="Project Author" />
   </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
+
+  <Form.Group className="mb-3" controlId="formBasicPassword">
+    <Form.Label>What is the status of this Project?</Form.Label>
+    <Form.Control type="password" placeholder="Project Status" />
   </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
+
+  
+
 </Form>
     )
 }
+
+/*
+<Form.Group className="mb-3" controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+*/
