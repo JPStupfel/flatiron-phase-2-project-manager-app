@@ -4,26 +4,35 @@ import Button from 'react-bootstrap/Button'
 
 export default function AddProjectForm(){
 
-    //create state of new object
     const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
 
-    //make an onchange function
     function handleChangeInput(event){
         const updatedProject = {...newProject, [event.target.name]: event.target.value}
         setNewProject(updatedProject)
 
     }
 
-    //make form a controlled form using state
 
     //make post request
+
+    function handleSubmit(event){
+        event.preventDefault()
+
+        fetch('http://localhost:4000/Projects', {
+            method: "POST",
+            headers: {'Content-Type':'application/json',"Accept": 'application/json'},
+            body: JSON.stringify(newProject)
+        }).then(r=>r.json()).then(d=>console.log(d))
+    }
     //pass down an updater function from app to update projects in app component
     //pass users and make user input a drop down
 console.log(newProject)
 
     return(
         
-    <Form>
+    <Form
+    onSubmit={handleSubmit} 
+    >
 
         <Form.Group 
         className="mb-3" 
@@ -71,7 +80,8 @@ console.log(newProject)
         </Form.Group>
 
 
-        <Button variant="primary" type="submit">
+        <Button 
+        variant="primary" type="submit">
             Submit
         </Button>
 

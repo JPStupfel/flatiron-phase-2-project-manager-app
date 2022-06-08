@@ -15,6 +15,7 @@ function App() {
   const [userList, setUserList] = useState([])
   const [projects, setProjects] = useState([])
   const [addProject, setAddProject] = useState(false)
+  
 
   useEffect( 
     ()=>{fetch('http://localhost:4000/users').then(r=>r.json()).then(d=>setUserList(d))},[]
@@ -25,7 +26,6 @@ function App() {
   )
 
 
-console.log(userList)
   return (
     <>
     <NavBar />
