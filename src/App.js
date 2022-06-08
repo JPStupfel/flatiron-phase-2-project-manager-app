@@ -43,7 +43,8 @@ console.log(userList)
       <Route path="/projects">
         <ProjectContainer projects={projects} />
         <button 
-        onClick={()=>setAddProject((prev)=>!prev)}>Add New Project
+        onClick={()=>setAddProject((prev)=>!prev)}>
+          {!addProject? 'Add New Project' : 'Cancel Adding Project'}
         </button>
         <>{addProject ? <AddProject /> : <></>}</>
 
