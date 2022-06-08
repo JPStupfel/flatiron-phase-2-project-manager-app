@@ -3,11 +3,13 @@ import './App.css';
 import UserCard from './components/UserCard';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from './components/Home';
-
+import NavBar from './components/Navbar';
 
 
 function App() {
   return (
+    <>
+    <NavBar />
     <Switch>
     
 
@@ -20,6 +22,7 @@ function App() {
       </Route>
 
       </Switch>
+    </>
 
   );
 }
