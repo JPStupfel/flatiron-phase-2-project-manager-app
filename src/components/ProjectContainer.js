@@ -3,9 +3,16 @@ import React from "react"
 import ProjectCard from "./ProjectCard"
 
 
-export default function ProjectContainer({projects}){
+export default function ProjectContainer({projects, onClickDeleteButton}){
 
-    const projectCards = projects.map(e=><ProjectCard key={e.id} project={e}/>)
+    const projectCards = projects.map(
+        e=>
+        <ProjectCard
+         key={e.id} 
+         project={e}
+         onClickDeleteButton={onClickDeleteButton}
+         />
+        )
     
     return(
         <div>

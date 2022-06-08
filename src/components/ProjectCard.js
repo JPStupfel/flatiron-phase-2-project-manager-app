@@ -1,11 +1,13 @@
 import React from "react";
 
-export default function ProjectCard({project}){
+export default function ProjectCard({project, onClickDeleteButton}){
 
 
     function handleDelete(id){
-    console.log('I want to delete', id)
-    fetch(`http://localhost:4000/Projects/${id}`, {method: "DELETE"})
+    console.log('I want to delete', id);
+    fetch(`http://localhost:4000/Projects/${id}`, {method: "DELETE"});
+    onClickDeleteButton(id)
+
     }
 
     return(

@@ -32,6 +32,11 @@ function App() {
     setAddProject(false)
   }
 
+  function onClickDeleteButton(id){
+    const updatedProjectList = projects.filter(e=>e.id!==id)
+    setProjects(updatedProjectList)
+  }
+
 
   return (
     <>
@@ -50,7 +55,8 @@ function App() {
       <Route path="/projects">
 
           <ProjectContainer 
-          projects={projects} />
+          projects={projects}
+          onClickDeleteButton={onClickDeleteButton} />
 
           <AddProject
           addProject={addProject}
