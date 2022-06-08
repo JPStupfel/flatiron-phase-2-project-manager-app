@@ -3,6 +3,8 @@ import DisplayProjectCard from "./DisplayProjectCard";
 
 export default function ProjectCard({project, onClickDeleteButton}){
 
+    const [edit, setEdit] = useState(false)
+
 
     function handleDelete(id){
     console.log('I want to delete', id);
@@ -14,7 +16,7 @@ export default function ProjectCard({project, onClickDeleteButton}){
     return(
         <div>
 
-            <DisplayProjectCard project={project} />
+            {!edit ? <DisplayProjectCard project={project} /> : <>Let's edit!</>}
             
             <button>Edit This Project^</button>
             <button onClick={()=>handleDelete(project.id)} >Delete This Project^</button>
