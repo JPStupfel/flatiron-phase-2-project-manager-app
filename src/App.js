@@ -6,6 +6,7 @@ import NavBar from './components/Navbar';
 import CardContainer from './components/CardContainer';
 import  './App.css';
 import ProjectContainer from './components/ProjectContainer';
+import AddProject from './components/AddProject';
 
 
 
@@ -44,7 +45,7 @@ console.log(userList)
         <button 
         onClick={()=>setAddProject((prev)=>!prev)}>Add New Project
         </button>
-        <>{addProject ? <>will ad</> : <></>}</>
+        <>{addProject ? <AddProject /> : <></>}</>
 
 
       </Route>
