@@ -22,7 +22,7 @@ export default function ProjectCard({project, onClickDeleteButton}){
         <div>
 
             {!edit ? <DisplayProjectCard 
-            onClickDeleteButton={onClickDeleteButton} 
+            handleDelete={handleDelete} 
             project={project} 
             handleClickEdit={handleClickEdit}
             /> : <>Let's edit!</>}
