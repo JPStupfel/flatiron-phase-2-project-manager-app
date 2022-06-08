@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function DisplayProjectCard({project, handleDelete, handleClickEdit}){
+
+
     return(
     <div>
  

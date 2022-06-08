@@ -2,23 +2,28 @@ import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-export default function EditProjectCard({project, handleClickEdit}){
+export default function EditProjectCard({project, handleClickEdit, handlePatch}){
 
     const [newProject, setNewProject] = useState(project)
 
     function handleChangeInput(event){
         const updatedProject = {...newProject, [event.target.name]: event.target.value}
         setNewProject(updatedProject)
-        console.log(updatedProject)
-
-
 
     }
 
     function handleSubmit(event){
-        event.preventDefault()
-    }
+        event.preventDefault();
+        handlePatch(newProject)
 
+        //patch
+        
+
+        //reset projects in app component
+
+
+        handleClickEdit()
+    }
    
     return(
         
