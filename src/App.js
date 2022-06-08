@@ -12,9 +12,14 @@ import ProjectContainer from './components/ProjectContainer';
 function App() {
 
   const [userList, setUserList] = useState([])
+  const [projects, setProjects] = useState([])
 
   useEffect( 
     ()=>{fetch('http://localhost:4000/users').then(r=>r.json()).then(d=>setUserList(d))},[]
+  )
+
+  useEffect( 
+    ()=>{fetch('http://localhost:4000/projects').then(r=>r.json()).then(d=>setProjects(d))},[]
   )
 
 
@@ -34,7 +39,7 @@ console.log(userList)
       </Route>
 
       <Route path="/projects">
-        <ProjectContainer projects={userList} />
+        <ProjectContainer projects={projects} />
       </Route>
 
       </Switch>
