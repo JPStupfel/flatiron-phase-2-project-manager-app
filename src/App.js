@@ -7,6 +7,7 @@ import CardContainer from './components/CardContainer';
 import  './App.css';
 import ProjectContainer from './components/ProjectContainer';
 import AddProject from './components/AddProject';
+import AddUser from './components/AddUser';
 
 
 
@@ -15,6 +16,8 @@ function App() {
   const [userList, setUserList] = useState([])
   const [projects, setProjects] = useState([])
   const [addProject, setAddProject] = useState(false)
+  const [addUser, setAddUser] = useState(false)
+
   
 //fetch users
   useEffect( 
@@ -49,6 +52,8 @@ function App() {
   }
 
 
+  
+
   return (
     <>
     <NavBar />
@@ -61,6 +66,15 @@ function App() {
 
       <Route path="/users">
         <CardContainer userList={userList} />
+        <AddUser
+          addUser={addUser}
+          setAddUser={setAddUser}
+          onAddNewProject={onAddNewProject}
+          onCancelAdd={onCancelAdd}
+           />
+
+  
+
       </Route>
 
       <Route path="/projects">
