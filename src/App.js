@@ -17,7 +17,6 @@ function App() {
   const [addUser, setAddUser] = useState(false)
 
   const [projects, setProjects] = useState([])
-  //const [addProject, setAddProject] = useState(false)
   
 
   
@@ -48,12 +47,9 @@ function App() {
   function onAddNewProject(newProject){
     const updatedProjectList = [...projects, newProject]
     setProjects(updatedProjectList)
-   // setAddProject(false)
   }
 
-  // function onCancelAdd(){
-  //   setAddProject(false)
-  // }
+ 
 
   
 
@@ -89,10 +85,7 @@ function App() {
           projects={projects}
           onClickDeleteButton={onClickDeleteButton}
           onEditProject={onEditProject}
-          //addProject={addProject}
-          //setAddProject={setAddProject}
           onAddNewProject={onAddNewProject}
-          //onCancelAdd={onCancelAdd}
            />
 
           
