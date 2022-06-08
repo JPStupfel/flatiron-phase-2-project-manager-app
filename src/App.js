@@ -41,13 +41,13 @@ console.log(userList)
       </Route>
 
       <Route path="/projects">
-        <ProjectContainer projects={projects} />
-        <button 
-        onClick={()=>setAddProject((prev)=>!prev)}>
-          {!addProject? 'Add New Project' : 'Cancel Adding Project'}
-        </button>
-        <>{addProject ? <AddProject /> : <></>}</>
 
+          <ProjectContainer 
+          projects={projects} />
+
+          <AddProject
+          addProject={addProject}
+          setAddProject={setAddProject} />
 
       </Route>
 
