@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-export default function EditProjectCard({project}){
+export default function EditProjectCard({project, handleClickEdit}){
 
     const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
 
@@ -14,13 +14,9 @@ export default function EditProjectCard({project}){
 
     function handleSubmit(event){
         event.preventDefault()
-
-       
-
     }
 
-  
-
+   
     return(
         
     <Form
@@ -35,7 +31,7 @@ export default function EditProjectCard({project}){
         <div></div>
 
         <Button 
-        variant="primary" type="button">
+        variant="primary" type="button" onClick={handleClickEdit}>
             Cancel
         </Button>
 

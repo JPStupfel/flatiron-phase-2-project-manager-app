@@ -17,6 +17,8 @@ export default function ProjectCard({project, onClickDeleteButton}){
         setEdit(prev=>!prev)
     }
 
+
+
     
 
     return(
@@ -26,7 +28,7 @@ export default function ProjectCard({project, onClickDeleteButton}){
             handleDelete={handleDelete} 
             project={project} 
             handleClickEdit={handleClickEdit}
-            /> : <EditProjectCard project={project}/>}
+            /> : <EditProjectCard handleClickEdit={handleClickEdit} project={project}/>}
             
            
 
