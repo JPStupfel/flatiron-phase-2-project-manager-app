@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-export default function AddProjectForm({onAddNewProject}){
+export default function AddProjectForm({onCancelAdd, onAddNewProject}){
 
     const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
 
@@ -82,6 +82,11 @@ export default function AddProjectForm({onAddNewProject}){
         <Button 
         variant="primary" type="submit">
             Submit
+        </Button>
+        <Button
+        onClick={onCancelAdd}
+        variant="primary" type="text">
+            Cancel
         </Button>
 
     </Form>

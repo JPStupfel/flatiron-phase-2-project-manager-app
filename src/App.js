@@ -33,6 +33,10 @@ function App() {
     setAddProject(false)
   }
 
+  function onCancelAdd(){
+    setAddProject(false)
+  }
+
   function onClickDeleteButton(id){
     const updatedProjectList = projects.filter(e=>e.id!==id)
     setProjects(updatedProjectList)
@@ -71,6 +75,7 @@ function App() {
           addProject={addProject}
           setAddProject={setAddProject}
           onAddNewProject={onAddNewProject}
+          onCancelAdd={onCancelAdd}
            />
 
       </Route>
