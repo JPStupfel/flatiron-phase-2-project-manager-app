@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+import DisplayProjectCard from "./DisplayProjectCard";
 
 export default function ProjectCard({project, onClickDeleteButton}){
 
@@ -12,18 +13,12 @@ export default function ProjectCard({project, onClickDeleteButton}){
 
     return(
         <div>
-            <h3>{project.name}</h3>
+
+            <DisplayProjectCard project={project} />
+            
             <button>Edit This Project^</button>
             <button onClick={()=>handleDelete(project.id)} >Delete This Project^</button>
-            <ul>
-                <li>
-                    Created by: {project.author}
-                </li>
-                <li>
-                    Project Status: {project.status}
-                </li>
-            </ul>
-            
+
          </div>
 
     )
