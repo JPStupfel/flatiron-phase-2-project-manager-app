@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import DisplayProjectCard from "./DisplayProjectCard";
+import EditProjectCard from "./EditProjectCard";
 
 export default function ProjectCard({project, onClickDeleteButton}){
 
@@ -25,7 +26,7 @@ export default function ProjectCard({project, onClickDeleteButton}){
             handleDelete={handleDelete} 
             project={project} 
             handleClickEdit={handleClickEdit}
-            /> : <>Let's edit!</>}
+            /> : <EditProjectCard project={project}/>}
             
            
 
