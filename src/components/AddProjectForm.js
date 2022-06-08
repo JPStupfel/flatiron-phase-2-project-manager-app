@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 export default function AddProjectForm(){
 
     //create state of new object
-    const [newProject, setNewProject] = useState({})
+    const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
 
     //make an onchange function
     function handleChangeInput(event){
@@ -24,40 +24,56 @@ console.log(newProject)
     return(
         
     <Form>
+
         <Form.Group 
-        name='name' 
         className="mb-3" 
-        onChange={handleChangeInput}
+        
         >
             <Form.Label>Project Name</Form.Label>
-            <Form.Control name={'name'}  type="text" placeholder="Enter Project Name" />
+
+            <Form.Control 
+            name={'name'}  
+            type="text" 
+            placeholder="Enter Project Name" 
+            value={newProject.name}
+            onChange={handleChangeInput}/>
+           
+
             <Form.Text className="text-muted">
             Give your project a memorable, but informative name!
             </Form.Text>
         </Form.Group>
 
         <Form.Group    
-        onChange={handleChangeInput}
         className="mb-3" 
         >
             <Form.Label>Who is Creating this Project?</Form.Label>
-            <Form.Control name='author' type="text" placeholder="Enter Project Author" />
+            <Form.Control 
+            name='author' 
+            type="text" 
+            placeholder="Enter Project Author"
+            onChange={handleChangeInput}
+            value={newProject.author}
+            />
         
         </Form.Group>
 
         <Form.Group 
-        onChange={handleChangeInput}  
         className="mb-3" 
         >
             <Form.Label>What is the status of this Project?</Form.Label>
-            <Form.Control name='status' type="text" placeholder="Enter Project Status" />
+            <Form.Control 
+            name='status' 
+            type="text" 
+            placeholder="Enter Project Status"
+            onChange={handleChangeInput}  
+            />
         </Form.Group>
+
 
         <Button variant="primary" type="submit">
             Submit
         </Button>
-
-  
 
     </Form>
     )
