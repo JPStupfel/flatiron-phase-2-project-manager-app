@@ -14,9 +14,11 @@ import AddUser from './components/AddUser';
 function App() {
 
   const [userList, setUserList] = useState([])
+  const [addUser, setAddUser] = useState(false)
+
   const [projects, setProjects] = useState([])
   const [addProject, setAddProject] = useState(false)
-  const [addUser, setAddUser] = useState(false)
+  
 
   
 //fetch users
@@ -30,15 +32,7 @@ function App() {
   )
 
 
-  function onAddNewProject(newProject){
-    const updatedProjectList = [...projects, newProject]
-    setProjects(updatedProjectList)
-    setAddProject(false)
-  }
-
-  function onCancelAdd(){
-    setAddProject(false)
-  }
+ 
 
   function onClickDeleteButton(id){
     const updatedProjectList = projects.filter(e=>e.id!==id)
@@ -50,6 +44,20 @@ function App() {
     setProjects(updatedProjectList)
 
   }
+
+  function onAddNewProject(newProject){
+    const updatedProjectList = [...projects, newProject]
+    setProjects(updatedProjectList)
+    setAddProject(false)
+  }
+
+  function onCancelAdd(){
+    setAddProject(false)
+  }
+
+  
+
+ 
 
 
   
@@ -69,8 +77,6 @@ function App() {
         <AddUser
           addUser={addUser}
           setAddUser={setAddUser}
-          onAddNewProject={onAddNewProject}
-          onCancelAdd={onCancelAdd}
            />
 
   
@@ -83,14 +89,13 @@ function App() {
           projects={projects}
           onClickDeleteButton={onClickDeleteButton}
           onEditProject={onEditProject}
-           />
-
-          <AddProject
           addProject={addProject}
           setAddProject={setAddProject}
           onAddNewProject={onAddNewProject}
           onCancelAdd={onCancelAdd}
            />
+
+          
 
       </Route>
 
