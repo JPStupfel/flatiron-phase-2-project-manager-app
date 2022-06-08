@@ -10,17 +10,24 @@ export default function ProjectCard({project, onClickDeleteButton}){
     console.log('I want to delete', id);
     fetch(`http://localhost:4000/Projects/${id}`, {method: "DELETE"});
     onClickDeleteButton(id)
-
     }
+
+    function handleClickEdit(){
+        setEdit(prev=>!prev)
+    }
+
+    
 
     return(
         <div>
 
-            {!edit ? <DisplayProjectCard project={project} /> : <>Let's edit!</>}
+            {!edit ? <DisplayProjectCard 
+            onClickDeleteButton={onClickDeleteButton} 
+            project={project} 
+            handleClickEdit={handleClickEdit}
+            /> : <>Let's edit!</>}
             
-            <button onClick={()=>setEdit(prev=>!prev)} >{ !edit? `Edit This Project` : `Finish Editing`} ^</button>
-
-            <button onClick={()=>handleDelete(project.id)} >Delete This Project^</button>
+           
 
          </div>
 
