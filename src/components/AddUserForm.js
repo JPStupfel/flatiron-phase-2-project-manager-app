@@ -6,7 +6,7 @@ import AddUser from "./AddUser";
 export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser}){
 
 
-    const [newUser, setNewUser] = useState({name:'', author: '', status:'' })
+    const [newUser, setNewUser] = useState({'name':'', 'image': '', 'Projects Created':0 })
 
     function handleChangeInput(event){
         const updatedUser = {...newUser, [event.target.name]: event.target.value}
@@ -45,7 +45,7 @@ export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser})
             <Form.Control 
             name={'name'}  
             type="text" 
-            placeholder="Enter Project Name" 
+            placeholder="Enter User Name" 
             value={newUser.name}
             onChange={handleChangeInput}/>
            
@@ -58,28 +58,17 @@ export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser})
         <Form.Group    
         className="mb-3" 
         >
-            <Form.Label>Who is Creating this User?</Form.Label>
+            <Form.Label>image URL</Form.Label>
             <Form.Control 
-            name='author' 
+            name='image' 
             type="text" 
-            placeholder="Enter Project Author"
+            placeholder="Provide an image URL"
             onChange={handleChangeInput}
             value={newUser.author}
             />
         
         </Form.Group>
 
-        <Form.Group 
-        className="mb-3" 
-        >
-            <Form.Label>What is the status of this User?</Form.Label>
-            <Form.Control 
-            name='status' 
-            type="text" 
-            placeholder="Enter User Status"
-            onChange={handleChangeInput}  
-            />
-        </Form.Group>
 
 
         <Button 
