@@ -18,7 +18,7 @@ export default function ProjectCard({project, onClickDeleteButton}){
 
             {!edit ? <DisplayProjectCard project={project} /> : <>Let's edit!</>}
             
-            <button>Edit This Project^</button>
+            <button onClick={()=>setEdit(prev=>!prev)} >Edit This Project^</button>
             <button onClick={()=>handleDelete(project.id)} >Delete This Project^</button>
 
          </div>
