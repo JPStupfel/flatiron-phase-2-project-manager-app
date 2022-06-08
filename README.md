@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Goals
+
+Let's boil this down to something really simple.
+
+1. Make status and user, pre-selected options
+2. Add user field for created projects
+3. When a project is created or completed, patch that user.
+4. add, delete, modify user card functionality
+
+then, we can style...like group project cards by status etc.
