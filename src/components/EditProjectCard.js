@@ -16,12 +16,6 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch})
         event.preventDefault();
         handlePatch(newProject)
 
-        //patch
-        
-
-        //reset projects in app component
-
-
         handleClickEdit()
     }
    

@@ -16,11 +16,12 @@ function App() {
   const [projects, setProjects] = useState([])
   const [addProject, setAddProject] = useState(false)
   
-
+//fetch users
   useEffect( 
     ()=>{fetch('http://localhost:4000/users').then(r=>r.json()).then(d=>setUserList(d))},[]
   )
 
+  // fetch projects
   useEffect( 
     ()=>{fetch('http://localhost:4000/projects').then(r=>r.json()).then(d=>setProjects(d))},[]
   )
@@ -35,6 +36,12 @@ function App() {
   function onClickDeleteButton(id){
     const updatedProjectList = projects.filter(e=>e.id!==id)
     setProjects(updatedProjectList)
+  }
+
+  function onEditProject(obj){
+    const updatedProjectList = projects.map(e=> e.id===obj.id ? obj : e);
+    setProjects(updatedProjectList)
+
   }
 
 
@@ -56,7 +63,9 @@ function App() {
 
           <ProjectContainer 
           projects={projects}
-          onClickDeleteButton={onClickDeleteButton} />
+          onClickDeleteButton={onClickDeleteButton}
+          onEditProject={onEditProject}
+           />
 
           <AddProject
           addProject={addProject}
