@@ -14,7 +14,6 @@ import AddUser from './components/AddUser';
 function App() {
 
   const [userList, setUserList] = useState([])
-  const [addUser, setAddUser] = useState(false)
 
   const [projects, setProjects] = useState([])
   
@@ -32,7 +31,7 @@ function App() {
 
 
  
-
+//helper functions for Projects Page
   function onClickDeleteButton(id){
     const updatedProjectList = projects.filter(e=>e.id!==id)
     setProjects(updatedProjectList)
@@ -70,10 +69,7 @@ function App() {
 
       <Route path="/users">
         <CardContainer userList={userList} />
-        <AddUser
-          addUser={addUser}
-          setAddUser={setAddUser}
-           />
+        <AddUser />
 
   
 
