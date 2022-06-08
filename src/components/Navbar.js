@@ -15,20 +15,31 @@ export default function NavBar() {
 
     return (
         <>
-        <NavLink
-        to="/"
-        exact
-        >
-        home
-        </NavLink>
-        <div></div>
-        <NavLink
-        to="/users"
-        exact
-        >
-        Users
-        </NavLink>
-        <div></div>
+
+          <NavLink
+          to="/"
+          exact
+          >
+          home
+          </NavLink>
+
+          <div></div>
+
+          <NavLink
+          to="/users"
+          exact
+          >
+          Users
+          </NavLink>
+
+          <div></div>
+
+          <NavLink
+          to="/projects"
+          exact
+          >
+          Projects
+          </NavLink>
 
     
 
