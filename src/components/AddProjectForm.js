@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-export default function AddProjectForm(){
+export default function AddProjectForm({onAddNewProject}){
 
     const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
 
@@ -12,9 +12,6 @@ export default function AddProjectForm(){
 
     }
 
-
-    //make post request
-
     function handleSubmit(event){
         event.preventDefault()
 
@@ -22,11 +19,13 @@ export default function AddProjectForm(){
             method: "POST",
             headers: {'Content-Type':'application/json',"Accept": 'application/json'},
             body: JSON.stringify(newProject)
-        }).then(r=>r.json()).then(d=>console.log(d))
+        }).then(r=>r.json()).then(d=>onAddNewProject(d))
+
+
     }
+
     //pass down an updater function from app to update projects in app component
     //pass users and make user input a drop down
-console.log(newProject)
 
     return(
         

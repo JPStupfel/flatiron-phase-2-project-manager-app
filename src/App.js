@@ -26,6 +26,13 @@ function App() {
   )
 
 
+  function onAddNewProject(newProject){
+    const updatedProjectList = [...projects, newProject]
+    setProjects(updatedProjectList)
+    setAddProject(false)
+  }
+
+
   return (
     <>
     <NavBar />
@@ -47,7 +54,9 @@ function App() {
 
           <AddProject
           addProject={addProject}
-          setAddProject={setAddProject} />
+          setAddProject={setAddProject}
+          onAddNewProject={onAddNewProject}
+           />
 
       </Route>
 
