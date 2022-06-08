@@ -8,6 +8,10 @@ export default function ProjectContainer({projects}){
     const projectCards = projects.map(e=><ProjectCard key={e.id} project={e}/>)
     
     return(
-        <>{projectCards}</>
+        <div>
+            <h1>Projects</h1>
+            {projectCards}
+            <button>Add new Project</button>
+        </div>
     )
 }
