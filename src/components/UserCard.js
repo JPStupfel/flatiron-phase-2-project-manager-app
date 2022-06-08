@@ -15,7 +15,7 @@ function UserCard({user}) {
     <Card.Body>
       <Card.Title>{user.name }</Card.Title>
       <Card.Text>
-        Tasks Completed: {user["Tasks Completed"]}
+      Projects Created: {user["Projects Created"]}
       </Card.Text>
     </Card.Body>
     <Card.Footer>

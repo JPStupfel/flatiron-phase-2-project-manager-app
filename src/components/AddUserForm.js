@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import AddUser from "./AddUser";
 
 export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser}){
 
@@ -16,7 +17,7 @@ export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser})
     function handleSubmit(event){
         event.preventDefault()
 
-        fetch('http://localhost:4000/Projects', {
+        fetch('http://localhost:4000/users', {
             method: "POST",
             headers: {'Content-Type':'application/json',"Accept": 'application/json'},
             body: JSON.stringify(newUser)
@@ -27,8 +28,7 @@ export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser})
 
     }
 
-    //pass down an updater function from app to update projects in app component
-    //pass users and make user input a drop down
+   console.log(newUser)
 
     return(
         
