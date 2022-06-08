@@ -3,14 +3,17 @@ import React from "react"
 import AddUser from "./AddUser";
 
 
-export default function CardContainer({userList}){
+export default function CardContainer({userList, onCancelAddUser, onAddNewUser}){
 
     const userCards = userList.map(e=><UserCard key={e.id} user={e}/>)
     
     return(
         <>
         {userCards}
-        <AddUser />
+        <AddUser
+        onCancelAddUser={onCancelAddUser}
+        onAddNewUser={onAddNewUser}
+         />
         </>
     )
 }

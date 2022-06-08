@@ -49,11 +49,18 @@ function App() {
   }
 
  
+//helper functions for users page
 
+  function onCancelAddUser() {
+    console.log('onCancelAddUser')
+  }
+  function onAddNewUser(){
+    console.log('onAddNewUser')
+  }
   
 
  
-
+  
 
   
 
@@ -68,7 +75,11 @@ function App() {
       </Route>
 
       <Route path="/users">
-        <CardContainer userList={userList} />
+        <CardContainer
+        userList={userList}
+        onCancelAddUser={onCancelAddUser}
+        onAddNewUser={onAddNewUser}
+         />
        
 
   
