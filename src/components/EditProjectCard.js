@@ -4,11 +4,14 @@ import Button from 'react-bootstrap/Button'
 
 export default function EditProjectCard({project, handleClickEdit}){
 
-    const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
+    const [newProject, setNewProject] = useState(project)
 
     function handleChangeInput(event){
         const updatedProject = {...newProject, [event.target.name]: event.target.value}
         setNewProject(updatedProject)
+        console.log(updatedProject)
+
+
 
     }
 
@@ -22,12 +25,30 @@ export default function EditProjectCard({project, handleClickEdit}){
     <Form
     onSubmit={handleSubmit} 
     >
-        <input value={project.name}></input>
-        <div></div>
-        <input value={project.author}></input>
+        <input 
+        name='name' 
+        value={newProject.name}
+        onChange={handleChangeInput}
+        ></input>
+
         <div></div>
 
-        <input value={project.status}></input>
+        <input
+        name='author' 
+        value={newProject.author}
+        onChange={handleChangeInput}
+
+        ></input>
+
+        <div></div>
+
+        <input 
+        name='status' 
+        value={newProject.status}
+        onChange={handleChangeInput}
+
+        ></input>
+
         <div></div>
 
         <Button 
