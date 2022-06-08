@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-export default function AddProjectForm({onCancelAdd, onAddNewProject}){
+export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProject}){
 
     const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
 
@@ -19,7 +19,9 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject}){
             method: "POST",
             headers: {'Content-Type':'application/json',"Accept": 'application/json'},
             body: JSON.stringify(newProject)
-        }).then(r=>r.json()).then(d=>onAddNewProject(d))
+        }).then(r=>r.json()).then(d=>onAddNewProject(d));
+
+        setAddProject(false)
 
 
     }

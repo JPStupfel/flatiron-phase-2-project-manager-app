@@ -1,5 +1,5 @@
 import UserCard from "./UserCard"
-import React from "react"
+import React, {useState} from "react"
 import ProjectCard from "./ProjectCard"
 import AddProject from "./AddProject"
 
@@ -8,12 +8,15 @@ export default function ProjectContainer({
     projects, 
     onClickDeleteButton, 
     onEditProject, 
-    addProject,
-    setAddProject,
+    //addProject,
+    //setAddProject,
     onAddNewProject,
-    onCancelAdd,
+    //onCancelAdd,
 
 }){
+
+    const [addProject, setAddProject] = useState(false)
+
 
     const projectCards = projects.map(
         e=>
@@ -25,6 +28,9 @@ export default function ProjectContainer({
          />
         )
 
+        function onCancelAdd(){
+            setAddProject(false)
+          }
 
 
     
