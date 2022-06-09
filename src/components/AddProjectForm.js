@@ -35,7 +35,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
 
     return(
-        
+    <>
     <Form
     onSubmit={handleSubmit} 
     >
@@ -85,12 +85,13 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
         variant="primary" type="submit">
             Submit
         </Button>
-        <Button
-        onClick={onCancelAdd}
-        variant="primary" type="text">
-            Cancel
-        </Button>
-
+       
     </Form>
+     <Button
+     onClick={onCancelAdd}
+     variant="primary" type="text">
+         Cancel
+     </Button>
+     </>
     )
 }
