@@ -79,3 +79,27 @@ Let's boil this down to something really simple.
    xx 4. add, delete, user card functionality
 
 then, we can style...like group project cards by status etc.
+
+-App
+|-ProjectContainer
+| |-AddProject
+| | |-AddProjectForm
+| | |-UserDropDown
+| | |-StatusDropDown
+| |
+| |
+| |
+| |-ProjectCard
+| |-DisplayProjectCard
+| |-EditProjectCard
+| |-StatusDropDown
+| |-UserDropDown
+|
+|
+|
+|
+|
+|-CardContainer
+|-UserCard
+|-AddUser
+|-AddUserForm
