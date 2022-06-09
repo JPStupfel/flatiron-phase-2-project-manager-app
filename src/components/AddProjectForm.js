@@ -74,7 +74,9 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
         </Form.Group>
 
 
-        <StatusDropDown onSetStatus={onSetStatus} />
+        <StatusDropDown
+        buttonTitle={newProject}
+        onSetStatus={onSetStatus} />
 
 
 

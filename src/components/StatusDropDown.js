@@ -3,9 +3,10 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 
 
-export default function StatusDropDown({onSetStatus}){
+export default function StatusDropDown({onSetStatus, buttonTitle}){
+    console.log(buttonTitle.status)
     return(
-    <DropdownButton id="dropdown-basic-button" title="Select Status of Project">
+    <DropdownButton id="dropdown-basic-button" title={buttonTitle.status ? buttonTitle.status : 'select'}>
 
         <Dropdown.Item
          href="#/action-1"
