@@ -14,7 +14,8 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
     }
 
     function onSetStatus(status){
-        console.log(status)
+        const updatedProject = {...newProject, 'status': status}
+        setNewProject(updatedProject)
     }
 
     function handleSubmit(event){
