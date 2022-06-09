@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import StatusDropDown from "./StatusDropDown";
 import UserDropDown from "./UserDropDown";
+import  '../App.css';
+
 
 export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProject, userList}){
 
@@ -46,7 +48,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
     onSubmit={handleSubmit} 
     >
         <div className="project-list" >
-                <h3>
+                <h3><>Project Title:</>
                     <input 
                     name='name' 
                     value={newProject.name}
