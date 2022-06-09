@@ -54,8 +54,10 @@ function App() {
   function onCancelAddUser() {
     console.log('onCancelAddUser')
   }
-  function onAddNewUser(){
-    console.log('onAddNewUser')
+  function onAddNewUser(newUser){
+    const newUserList = [...userList, newUser]
+    setUserList(newUserList)
+    console.log('Added User')
   }
   
 
