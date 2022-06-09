@@ -40,53 +40,49 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
 
     return(
-    <>
+
     <Form
+    className="project-card"
     onSubmit={handleSubmit} 
     >
-
-        <Form.Group 
-        className="mb-3"      
-        >
-            <Form.Label>Project Name</Form.Label>
-            <Form.Control 
-            name={'name'}  
-            type="text" 
-            placeholder="Enter Project Name" 
-            value={newProject.name}
-            onChange={handleChangeInput}/>
-           
-
-            <Form.Text className="text-muted">
-            Give your project a memorable, but informative name!
-            </Form.Text>
-
-        </Form.Group>
-
-      
-
-        <UserDropDown
-        buttonTitle={newProject.author}
-        onSetUser={onSetUser} userList={userList} />
-
-        <StatusDropDown
-        buttonTitle={newProject.status}
-        onSetStatus={onSetStatus} />
+        <div className="project-list" >
+                <h3>
+                    <input 
+                    name='name' 
+                    value={newProject.name}
+                    onChange={handleChangeInput}
+                    ></input>
+                </h3>
+                <ul>
+                    <li>
+                    <UserDropDown
+                buttonTitle={newProject.author}
+                onSetUser={onSetUser} 
+                userList={userList} />
+                    </li>
+                    <li>
+                    <StatusDropDown
+                buttonTitle={newProject.status}
+                onSetStatus={onSetStatus}
+                />
+                    </li>
+                </ul>               
+        </div>
 
 
+            <div className="project-card-buttons">
+                <Button 
+                variant="outline-dark" type="button" onClick={onCancelAdd}>
+                    Cancel
+                </Button>
 
-
-        <Button 
-        variant="primary" type="submit">
-            Submit
-        </Button>
-       
-    </Form>
-     <Button
-     onClick={onCancelAdd}
-     variant="primary" type="text">
-         Cancel
-     </Button>
-     </>
+                <Button 
+                variant="outline-dark" type="submit">
+                    Submit
+                </Button>
+            </div>
+     </Form>
     )
 }
+
+

@@ -21,9 +21,9 @@ export default function DisplayProjectCard({project, handleDelete, handleClickEd
                     
             <div className="project-card-buttons">
 
-                <button onClick={handleClickEdit} >{`Edit This Project`} ^</button>
+                <button onClick={handleClickEdit} >Edit This Project</button>
 
-                <button onClick={()=>handleDelete(project.id)} >Delete This Project^</button>
+                <button onClick={()=>handleDelete(project.id)} >Delete This Project</button>
         </div>
     </div>
     )
