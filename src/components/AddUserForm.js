@@ -30,8 +30,7 @@ export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser})
 
    console.log(newUser)
 
-    return(
-        
+    return(<>
     <Form
     onSubmit={handleSubmit} 
     >
@@ -75,12 +74,14 @@ export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser})
         variant="primary" type="submit">
             Submit
         </Button>
-        <Button
-        onClick={onCancelAddUser}
-        variant="primary" type="text">
-            Cancel
-        </Button>
-
+        
     </Form>
+
+    <Button
+    onClick={onCancelAddUser}
+    variant="primary" type="text">
+        Cancel
+    </Button>
+    </>
     )
 }

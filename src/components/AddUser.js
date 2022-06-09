@@ -9,6 +9,11 @@ export default function AddUser({onAddNewUser, onCancelAddUser}){
     const [addUser, setAddUser] = useState(false)
 
 
+  function onCancelAddUser() {
+    setAddUser(false)
+  }
+
+
     return(
         <div>
             <button 
