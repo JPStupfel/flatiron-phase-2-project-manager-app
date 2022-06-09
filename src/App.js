@@ -56,6 +56,13 @@ function App() {
     setUserList(newUserList)
     console.log('Added User')
   }
+
+  function handleDeleteUser(id){
+    console.log('handleDeleteUser')
+    const newUserList = userList.filter(e=>e.id !== id)
+    setUserList(newUserList)
+  
+  }
   
 
  
@@ -77,6 +84,7 @@ function App() {
         <CardContainer
         userList={userList}
         onAddNewUser={onAddNewUser}
+        handleDeleteUser={handleDeleteUser}
          />
        
 

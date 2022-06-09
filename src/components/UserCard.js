@@ -8,10 +8,10 @@ import  '../App.css';
 
 
 
-function UserCard({user}) {
+function UserCard({user, handleDeleteUser}) {
 
   
-function handleDeleteUser(){console.log('handleDeleteUser')}
+//function handleDeleteUser(){console.log('handleDeleteUser')}
 
   return (
   <div className="App">
