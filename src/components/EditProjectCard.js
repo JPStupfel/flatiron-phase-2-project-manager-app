@@ -2,8 +2,9 @@ import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import StatusDropDown from "./StatusDropDown";
+import UserDropDown from "./UserDropDown";
 
-export default function EditProjectCard({project, handleClickEdit, handlePatch}){
+export default function EditProjectCard({project, handleClickEdit, handlePatch, userList}){
 
     const [newProject, setNewProject] = useState(project)
 
@@ -25,6 +26,12 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch})
         setNewProject(updatedProject)
     }
 
+    function onSetUser(user){
+        const updatedProject = {...newProject, 'author': user}
+        setNewProject(updatedProject)
+    }
+
+    console.log(userList)
     return(
         
     <Form
@@ -38,12 +45,10 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch})
 
         <div></div>
 
-        <input
-        name='author' 
-        value={newProject.author}
-        onChange={handleChangeInput}
-
-        ></input>
+        <UserDropDown
+        buttonTitle={newProject.author}
+        onSetUser={onSetUser} 
+        userList={userList} />
 
         <div></div>
 
@@ -51,6 +56,8 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch})
         buttonTitle={newProject.status}
         onSetStatus={onSetStatus}
         />
+        
+
 
         <div></div>
 

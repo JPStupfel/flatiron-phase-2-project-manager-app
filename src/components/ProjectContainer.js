@@ -23,6 +23,7 @@ export default function ProjectContainer({
          project={e}
          onClickDeleteButton={onClickDeleteButton}
          onEditProject={onEditProject}
+         userList={userList}
          />
         )
 

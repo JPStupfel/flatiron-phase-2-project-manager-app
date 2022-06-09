@@ -80,7 +80,6 @@ Let's boil this down to something really simple.
 
 then, we can style...like group project cards by status etc.
 
--App
 |-ProjectContainer
 | |-AddProject
 | | |-AddProjectForm
