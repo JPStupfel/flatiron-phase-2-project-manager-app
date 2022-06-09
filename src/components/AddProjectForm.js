@@ -38,7 +38,6 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
     }
 
-    //const users = userList.map(e=><>{e.name}</>)
 
     return(
     <>

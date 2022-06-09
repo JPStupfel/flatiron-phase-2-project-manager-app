@@ -1,3 +1,27 @@
+.project-list {
+  display: inline-block; 
+  width: 80%;
+  height: 100%;
+
+  }
+
+.project-card-buttons{
+  display: inline-flex;
+  width: 20%;
+
+}
+
+.project-card {
+  display:flex;
+  border-style: solid;
+  border-width: 10px;
+  border-color: black;
+  
+  
+}
+
+
+
 .App {
   text-align: center;
   color: 'red';

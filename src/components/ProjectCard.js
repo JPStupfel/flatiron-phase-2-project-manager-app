@@ -35,7 +35,11 @@ export default function ProjectCard({project, onClickDeleteButton, onEditProject
     
 
     return(
-        <div>
+        <div style={{
+            'display':'block',
+            'border-style':'solid',
+            'border-color': 'red'
+            }}>
 
             {!edit ? 
             <DisplayProjectCard 

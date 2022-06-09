@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import StatusDropDown from "./StatusDropDown";
 import UserDropDown from "./UserDropDown";
+import  '../App.css';
+
 
 export default function EditProjectCard({project, handleClickEdit, handlePatch, userList}){
 
@@ -35,41 +37,46 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch, 
     return(
         
     <Form
+    className="project-card"
     onSubmit={handleSubmit} 
     >
-        <input 
-        name='name' 
-        value={newProject.name}
-        onChange={handleChangeInput}
-        ></input>
+        <div className="project-list" >
+                <h3>
+                    <input 
+                    name='name' 
+                    value={newProject.name}
+                    onChange={handleChangeInput}
+                    ></input>
+                </h3>
+                <ul>
+                    <li>
+                    <UserDropDown
+                buttonTitle={newProject.author}
+                onSetUser={onSetUser} 
+                userList={userList} />
+                    </li>
+                    <li>
+                    <StatusDropDown
+                buttonTitle={newProject.status}
+                onSetStatus={onSetStatus}
+                />
+                    </li>
+                </ul>               
+        </div>
 
-        <div></div>
 
-        <UserDropDown
-        buttonTitle={newProject.author}
-        onSetUser={onSetUser} 
-        userList={userList} />
+            <div className="project-card-buttons">
+                <Button 
+                variant="outline-dark" type="button" onClick={handleClickEdit}>
+                    Cancel
+                </Button>
 
-        <div></div>
-
-        <StatusDropDown
-        buttonTitle={newProject.status}
-        onSetStatus={onSetStatus}
-        />
-        
-
-
-        <div></div>
-
-        <Button 
-        variant="primary" type="button" onClick={handleClickEdit}>
-            Cancel
-        </Button>
-
-        <Button 
-        variant="primary" type="submit">
-            Submit
-        </Button>
+                <Button 
+                variant="outline-dark" type="submit">
+                    Submit
+                </Button>
+            </div>
+            
 
     </Form>
     )
