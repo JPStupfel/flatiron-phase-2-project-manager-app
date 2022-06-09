@@ -30,7 +30,9 @@ function onDelete(event){
               <Card.Title>{user.name}</Card.Title>
               <Card.Text>
                 {`${user.name} has created ${user["Projects Created"]} projects.`}
+                
               </Card.Text>
+              <button onClick={onDelete}>Delete this user.</button>
             </Card.Body>
           </Card>
 

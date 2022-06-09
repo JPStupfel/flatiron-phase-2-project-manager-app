@@ -1,6 +1,10 @@
 import UserCard from "./UserCard";
 import React from "react"
 import AddUser from "./AddUser";
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
 
 
 export default function CardContainer({handleDeleteUser, userList, onAddNewUser}){
@@ -9,7 +13,15 @@ export default function CardContainer({handleDeleteUser, userList, onAddNewUser}
     
     return(
         <>
-        {userCards}
+        
+        <Row xs={1} md={2} className="g-4">
+            {userCards}
+        </Row>
+
+
+
+
+
         <AddUser
         onAddNewUser={onAddNewUser}
          />

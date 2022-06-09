@@ -21,7 +21,7 @@ export default function AddProject({addProject, setAddProject, onAddNewProject, 
             //else display add project button
             <div className="d-grid gap-2">
                 <Button 
-                id='add-project-button'
+                className='add-something-button'
                 variant="primary" 
                 size="lg"
                 onClick={()=>setAddProject((prev)=>!prev)}>

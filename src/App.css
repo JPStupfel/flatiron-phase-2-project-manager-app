@@ -19,7 +19,7 @@
   border-color: grey;
 }
 
-#add-project-button{
+.add-something-button{
   background-color: aliceblue;
   color: black;
   align-self: center;

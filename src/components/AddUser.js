@@ -20,10 +20,19 @@ export default function AddUser({onAddNewUser, onCancelAddUser}){
         <div>
             
             {!addUser ? 
-            <button 
+           
+            <div className="d-grid gap-2">
+            <Button 
+            className='add-something-button'
+            variant="primary" 
+            size="lg"
             onClick={()=>setAddUser((prev)=>!prev)}>
             Add New User
-            </button>
+            </Button>
+            </div>
+
+
+
             : 
             <AddUserForm 
             onCancelAddUser={onCancelAddUser}
