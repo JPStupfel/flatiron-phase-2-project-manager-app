@@ -8,10 +8,8 @@ export default function ProjectContainer({
     projects, 
     onClickDeleteButton, 
     onEditProject, 
-    //addProject,
-    //setAddProject,
+    userList,
     onAddNewProject,
-    //onCancelAdd,
 
 }){
 
@@ -43,6 +41,7 @@ export default function ProjectContainer({
           setAddProject={setAddProject}
           onAddNewProject={onAddNewProject}
           onCancelAdd={onCancelAdd}
+          userList={userList}
            />
         </div>
     )

@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import AddProjectForm from "./AddProjectForm";
 
-export default function AddProject({addProject, setAddProject, onAddNewProject, onCancelAdd}){
+export default function AddProject({addProject, setAddProject, onAddNewProject, onCancelAdd, userList}){
 
     
 
@@ -13,7 +13,7 @@ export default function AddProject({addProject, setAddProject, onAddNewProject, 
             onClick={()=>setAddProject((prev)=>!prev)}>
             {!addProject? 'Add New Project' : 'Cancel Adding Project'}
             </button>
-            <>{addProject ? <AddProjectForm setAddProject={setAddProject} onCancelAdd={onCancelAdd} onAddNewProject={onAddNewProject}/> : <></>}</>
+            <>{addProject ? <AddProjectForm setAddProject={setAddProject} onCancelAdd={onCancelAdd} onAddNewProject={onAddNewProject} userList={userList}/> : <></>}</>
         </div>
     )
 }

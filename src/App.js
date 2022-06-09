@@ -99,6 +99,7 @@ function App() {
           onClickDeleteButton={onClickDeleteButton}
           onEditProject={onEditProject}
           onAddNewProject={onAddNewProject}
+          userList={userList}
            />
 
           

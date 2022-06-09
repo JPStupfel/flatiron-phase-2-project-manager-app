@@ -2,8 +2,9 @@ import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import StatusDropDown from "./StatusDropDown";
+import UserDropDown from "./UserDropDown";
 
-export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProject}){
+export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProject, userList}){
 
     const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
 
@@ -16,6 +17,12 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
     function onSetStatus(status){
         const updatedProject = {...newProject, 'status': status}
         setNewProject(updatedProject)
+    }
+
+    function onSetUser(user){
+        const updatedProject = {...newProject, 'author': user}
+        setNewProject(updatedProject)
+        console.log(newProject)
     }
 
     function handleSubmit(event){
@@ -32,7 +39,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
     }
 
-
+    //const users = userList.map(e=><>{e.name}</>)
 
     return(
     <>
@@ -44,7 +51,6 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
         className="mb-3"      
         >
             <Form.Label>Project Name</Form.Label>
-
             <Form.Control 
             name={'name'}  
             type="text" 
@@ -59,20 +65,11 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
         </Form.Group>
 
-        <Form.Group    
-        className="mb-3" 
-        >
-            <Form.Label>Who is Creating this Project?</Form.Label>
-            <Form.Control 
-            name='author' 
-            type="text" 
-            placeholder="Enter Project Author"
-            onChange={handleChangeInput}
-            value={newProject.author}
-            />
-        
-        </Form.Group>
+      
 
+        <UserDropDown
+        buttonTitle={newProject.author}
+        onSetUser={onSetUser} userList={userList} />
 
         <StatusDropDown
         buttonTitle={newProject.status}
