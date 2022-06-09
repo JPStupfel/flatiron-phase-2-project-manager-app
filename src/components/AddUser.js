@@ -9,23 +9,27 @@ export default function AddUser({onAddNewUser, onCancelAddUser}){
     const [addUser, setAddUser] = useState(false)
 
 
-  function onCancelAddUser() {
+    function onCancelAddUser() {
     setAddUser(false)
   }
 
+  
 
+  //if add user is false, show add user button, if add user is true, show add user form
     return(
         <div>
+            
+            {!addUser ? 
             <button 
             onClick={()=>setAddUser((prev)=>!prev)}>
-            {!addUser? 'Add New User' : 'Cancel Adding Project'}
+            Add New User
             </button>
-            <>{addUser ? 
+            : 
             <AddUserForm 
             onCancelAddUser={onCancelAddUser}
             onAddNewUser={onAddNewUser}
             setAddUser={setAddUser}
-            /> : <></>}</>
+            /> }
         </div>
     )
 }
