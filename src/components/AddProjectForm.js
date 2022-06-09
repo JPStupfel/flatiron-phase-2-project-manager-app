@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import StatusDropDown from "./StatusDropDown";
 
 export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProject}){
 
@@ -10,6 +11,10 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
         const updatedProject = {...newProject, [event.target.name]: event.target.value}
         setNewProject(updatedProject)
 
+    }
+
+    function onSetStatus(status){
+        console.log(status)
     }
 
     function handleSubmit(event){
@@ -26,8 +31,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
     }
 
-    //pass down an updater function from app to update projects in app component
-    //pass users and make user input a drop down
+
 
     return(
         
@@ -36,8 +40,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
     >
 
         <Form.Group 
-        className="mb-3" 
-        
+        className="mb-3"      
         >
             <Form.Label>Project Name</Form.Label>
 
@@ -52,6 +55,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
             <Form.Text className="text-muted">
             Give your project a memorable, but informative name!
             </Form.Text>
+
         </Form.Group>
 
         <Form.Group    
@@ -68,17 +72,10 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
         
         </Form.Group>
 
-        <Form.Group 
-        className="mb-3" 
-        >
-            <Form.Label>What is the status of this Project?</Form.Label>
-            <Form.Control 
-            name='status' 
-            type="text" 
-            placeholder="Enter Project Status"
-            onChange={handleChangeInput}  
-            />
-        </Form.Group>
+
+        <StatusDropDown onSetStatus={onSetStatus} />
+
+
 
 
         <Button 
