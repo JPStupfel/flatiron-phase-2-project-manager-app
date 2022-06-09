@@ -24,10 +24,7 @@ export default function ProjectCard({project, onClickDeleteButton, onEditProject
         
         //onClickDeleteButton(id)
         }
-
-
-
-    
+  
 
     function handleClickEdit(){
         setEdit(prev=>!prev)

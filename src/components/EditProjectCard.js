@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import StatusDropDown from "./StatusDropDown";
 
 export default function EditProjectCard({project, handleClickEdit, handlePatch}){
 
@@ -19,6 +20,11 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch})
         handleClickEdit()
     }
    
+    function onSetStatus(status){
+        const updatedProject = {...newProject, 'status': status}
+        setNewProject(updatedProject)
+    }
+
     return(
         
     <Form
@@ -41,12 +47,10 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch})
 
         <div></div>
 
-        <input 
-        name='status' 
-        value={newProject.status}
-        onChange={handleChangeInput}
-
-        ></input>
+        <StatusDropDown
+        buttonTitle={newProject}
+        onSetStatus={onSetStatus}
+        />
 
         <div></div>
 
