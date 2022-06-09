@@ -51,9 +51,6 @@ function App() {
  
 //helper functions for users page
 
-  function onCancelAddUser() {
-    console.log('onCancelAddUser')
-  }
   function onAddNewUser(newUser){
     const newUserList = [...userList, newUser]
     setUserList(newUserList)
@@ -79,7 +76,6 @@ function App() {
       <Route path="/users">
         <CardContainer
         userList={userList}
-        onCancelAddUser={onCancelAddUser}
         onAddNewUser={onAddNewUser}
          />
        

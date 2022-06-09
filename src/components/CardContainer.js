@@ -3,7 +3,7 @@ import React from "react"
 import AddUser from "./AddUser";
 
 
-export default function CardContainer({userList, onCancelAddUser, onAddNewUser}){
+export default function CardContainer({userList, onAddNewUser}){
 
     const userCards = userList.map(e=><UserCard key={e.id} user={e}/>)
     
@@ -11,7 +11,6 @@ export default function CardContainer({userList, onCancelAddUser, onAddNewUser})
         <>
         {userCards}
         <AddUser
-        onCancelAddUser={onCancelAddUser}
         onAddNewUser={onAddNewUser}
          />
         </>
