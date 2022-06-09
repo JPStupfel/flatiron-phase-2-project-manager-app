@@ -19,6 +19,7 @@ export default function AddUser({onAddNewUser, onCancelAddUser}){
             <AddUserForm 
             onCancelAddUser={onCancelAddUser}
             onAddNewUser={onAddNewUser}
+            setAddUser={setAddUser}
             /> : <></>}</>
         </div>
     )
