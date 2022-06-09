@@ -1,48 +1,33 @@
 import React from "react";
 import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
+import Nav from 'react-bootstrap/Nav';
 
 
 export default function NavBar() {
-    const linkStyles = {
-        display: "inline-block",
-        width: "50px",
-        padding: "12px",
-        margin: "0 6px 6px",
-        background: "blue",
-        textDecoration: "none",
-        color: "white",
-      };
+    
 
     return (
-        <>
 
-          <NavLink
-          to="/"
-          exact
-          >
-          home
-          </NavLink>
+      <>
 
-          <div></div>
+      <Nav fill variant="tabs" >
+      <Nav.Item>
+        <Nav.Link exact href="/" eventKey="/">HOME</Nav.Link>
+      </Nav.Item>
 
-          <NavLink
-          to="/users"
-          exact
-          >
-          Users
-          </NavLink>
+      <Nav.Item>
+        <Nav.Link  href="/users" eventKey="/users" >TEAM MEMBERS
+        </Nav.Link>
+      </Nav.Item>
 
-          <div></div>
-
-          <NavLink
-          to="/projects"
-          exact
-          >
-          Projects
-          </NavLink>
-
-    
+      <Nav.Item>
+        <Nav.Link href='/projects' eventKey="/projects">PROJECTS</Nav.Link>
+      </Nav.Item>
+   
+    </Nav>
 
         </>
           
     )}
+
+    
