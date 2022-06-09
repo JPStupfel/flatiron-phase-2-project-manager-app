@@ -75,7 +75,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
 
         <StatusDropDown
-        buttonTitle={newProject}
+        buttonTitle={newProject.status}
         onSetStatus={onSetStatus} />
 
 

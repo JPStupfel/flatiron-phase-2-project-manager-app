@@ -6,7 +6,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 
 export default function StatusDropDown({onSetStatus, buttonTitle}){
     return(
-    <DropdownButton id="dropdown-basic-button" title={buttonTitle.status ? `Status: ${buttonTitle.status}` : 'Status: Choose a Status!'}>
+    <DropdownButton id="dropdown-basic-button" title={buttonTitle ? `Status: ${buttonTitle}` : 'Status: Choose a Status!'}>
 
         <Dropdown.Item
          href="#/action-1"

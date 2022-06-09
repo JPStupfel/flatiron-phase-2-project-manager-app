@@ -48,7 +48,7 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch})
         <div></div>
 
         <StatusDropDown
-        buttonTitle={newProject}
+        buttonTitle={newProject.status}
         onSetStatus={onSetStatus}
         />
 
