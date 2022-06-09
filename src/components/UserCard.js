@@ -11,7 +11,13 @@ import  '../App.css';
 function UserCard({user, handleDeleteUser}) {
 
   
-//function handleDeleteUser(){console.log('handleDeleteUser')}
+function onDelete(event){
+  
+  fetch(`http://localhost:4000/users/${user.id}`, {method: "DELETE"});
+  
+  handleDeleteUser(user.id)
+
+}
 
   return (
   <div className="App">
@@ -28,7 +34,7 @@ function UserCard({user, handleDeleteUser}) {
       </Card.Body>
 
       <DropdownButton id="dropdown-basic-button" title="Delete User">
-        <Dropdown.Item onClick={()=>handleDeleteUser(user.id)} href="#/action-1">{`Delete ${user.name}?`}</Dropdown.Item>
+        <Dropdown.Item onClick={onDelete} href="#/action-1">{`Delete ${user.name}?`}</Dropdown.Item>
        
       </DropdownButton>
 
