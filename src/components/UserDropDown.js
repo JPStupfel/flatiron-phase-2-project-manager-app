@@ -21,7 +21,7 @@ export default function UserDropDown({onSetUser, buttonTitle, userList}){
 
 
     return(
-    <DropdownButton id="dropdown-basic-button" title={buttonTitle ? `User: ${buttonTitle}` : 'User: Choose a User!'}>
+    <DropdownButton id="dropdown-basic-button" title={buttonTitle ? `User: ${buttonTitle}` : 'Project Creator: Choose an existing Team User!'}>
 
        {menuItems}
 

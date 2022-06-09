@@ -22,7 +22,6 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
     function onSetUser(user){
         const updatedProject = {...newProject, 'author': user}
         setNewProject(updatedProject)
-        console.log(newProject)
     }
 
     function handleSubmit(event){
