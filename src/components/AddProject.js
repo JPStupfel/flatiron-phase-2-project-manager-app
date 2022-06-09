@@ -9,11 +9,25 @@ export default function AddProject({addProject, setAddProject, onAddNewProject, 
 
     return(
         <div>
-            <button 
-            onClick={()=>setAddProject((prev)=>!prev)}>
-            {!addProject? 'Add New Project' : 'Cancel Adding Project'}
-            </button>
-            <>{addProject ? <AddProjectForm setAddProject={setAddProject} onCancelAdd={onCancelAdd} onAddNewProject={onAddNewProject} userList={userList}/> : <></>}</>
+
+            
+            {
+            //if add project
+            addProject ? 
+            //display add project form
+            <AddProjectForm setAddProject={setAddProject} onCancelAdd={onCancelAdd} onAddNewProject={onAddNewProject} userList={userList}/> 
+            
+            : 
+            //else display add project button
+            <div className="d-grid gap-2">
+                <Button 
+                id='add-project-button'
+                variant="primary" 
+                size="lg"
+                onClick={()=>setAddProject((prev)=>!prev)}>
+                'Add New Project'
+                </Button>
+            </div>}
         </div>
     )
 }
