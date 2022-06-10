@@ -97,3 +97,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 |-UserCard
 |-AddUser
 |-AddUserForm
+
+Functionality:
+
+You can:
+
+1. Navigate to three separate pages via client side routing.
+2. Add and delete new Members
+3. Add, delete and edit projects.
+4. When you add a team member, they show up on the choose team member drop down menu as potential authors
+5. when you add, delete or modify a project's status, the projects created count for each team member is verified and updated.
