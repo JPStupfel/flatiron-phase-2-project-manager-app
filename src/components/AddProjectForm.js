@@ -8,7 +8,8 @@ import  '../App.css';
 
 export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProject, userList}){
 
-    const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
+    const now = new Date()
+    const [newProject, setNewProject] = useState({name:'', author: '', status:'', date: now})
 
     
 
