@@ -117,6 +117,7 @@ function App() {
         userList={userList}
         onAddNewUser={onAddNewUser}
         handleDeleteUser={handleDeleteUser}
+        projects={projects}
          />
        
 

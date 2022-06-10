@@ -7,9 +7,9 @@ import Row from 'react-bootstrap/Row';
 
 
 
-export default function CardContainer({handleDeleteUser, userList, onAddNewUser}){
+export default function CardContainer({handleDeleteUser, userList, onAddNewUser, projects}){
 
-    const userCards = userList.map(e=><UserCard handleDeleteUser={handleDeleteUser} key={e.id} user={e}/>)
+    const userCards = userList.map(e=><UserCard projects={projects} handleDeleteUser={handleDeleteUser} key={e.id} user={e}/>)
     
     return(
         <>
