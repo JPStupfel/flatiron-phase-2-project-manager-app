@@ -10,6 +10,8 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
     const [newProject, setNewProject] = useState({name:'', author: '', status:'' })
 
+    
+
     function handleChangeInput(event){
         const updatedProject = {...newProject, [event.target.name]: event.target.value}
         setNewProject(updatedProject)
@@ -74,6 +76,13 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
                 onSetStatus={onSetStatus}
                 />
                     </li>
+                    {
+                    newProject.status==='Working On It' ? <li>Who?</li> : null
+                    }
+
+                
+
+
                 </ul>               
         </div>
 
