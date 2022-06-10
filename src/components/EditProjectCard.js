@@ -24,7 +24,12 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch, 
     }
    
     function onSetStatus(status){
-        const updatedProject = {...newProject, 'status': status}
+        const now = new Date();
+
+        const updatedProject = {...newProject, 'status': status, statusChangeOn: now}
+       
+
+
         setNewProject(updatedProject)
     }
 
@@ -33,7 +38,7 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch, 
         setNewProject(updatedProject)
     }
 
-    console.log(userList)
+    console.log('newProject', newProject)
     return(
         
     <Form

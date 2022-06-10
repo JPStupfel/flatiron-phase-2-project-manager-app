@@ -18,14 +18,14 @@ export default function ProjectCard({
     }
 
     function handlePatch(obj){
-        const objForPatch = {"name": obj.name, "author": obj.author, "status": obj.status}
+        const objForPatch = {"name": obj.name, "author": obj.author, "status": obj.status, 'statusChangeOn':obj.statusChangeOn}
 
 
         fetch(`http://localhost:4000/Projects/${obj.id}`, {
             method: "PATCH",
             headers: { 'Content-type': 'application/json; charset=UTF-8',},
             body: JSON.stringify(objForPatch)
-        }).then(r=>r.json()).then(d=>onEditProject(d))
+        }).then(r=>r.json()).then(d=>{onEditProject(d);console.log('patch',d)}).catch((error)=>alert(error))
         
         }
   
