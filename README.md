@@ -106,5 +106,6 @@ You can:
 2. Add and delete new Members
 3. Add, delete and edit projects.
 4. When you add a team member, they show up on the choose team member drop down menu as potential authors
-5. when you add, delete or modify a project's status, the projects created count for each team member is verified and updated.
+5. when you add, delete or modify a project's status, the projects created and completed count for each team member is updated.
 6. when adding a new project, includes data validation before you can submit.
+7. When you mark a project as complete, it removes that project from the projects page and adds it to the archives page.
