@@ -23,6 +23,10 @@ export default function NavBar() {
       <Nav.Item>
         <Nav.Link href='/projects' eventKey="/projects">PROJECTS</Nav.Link>
       </Nav.Item>
+
+      <Nav.Item>
+        <Nav.Link href='/archives' eventKey="/archives">COMPLETED PROJECTS</Nav.Link>
+      </Nav.Item>
    
     </Nav>
 

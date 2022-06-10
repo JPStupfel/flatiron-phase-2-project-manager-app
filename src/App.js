@@ -8,6 +8,7 @@ import  './App.css';
 import ProjectContainer from './components/ProjectContainer';
 import AddProject from './components/AddProject';
 import AddUser from './components/AddUser';
+import ArchiveContainer from './components/ArchiveContainer';
 
 
 
@@ -134,6 +135,20 @@ function App() {
            />
 
           
+
+      </Route>
+
+      <Route path="/archives">
+
+      <ArchiveContainer 
+      projects={projects}
+      onClickDeleteButton={onClickDeleteButton}
+      onEditProject={onEditProject}
+      onAddNewProject={onAddNewProject}
+      userList={userList}
+      />
+
+
 
       </Route>
 
