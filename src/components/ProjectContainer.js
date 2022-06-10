@@ -2,6 +2,9 @@ import UserCard from "./UserCard"
 import React, {useState} from "react"
 import ProjectCard from "./ProjectCard"
 import AddProject from "./AddProject"
+import '../App.css';
+
+
 
 
 export default function ProjectContainer({
@@ -73,7 +76,7 @@ export default function ProjectContainer({
     return(
         <div className='App'>
             <h1>Projects</h1>
-            <h2>On Hold</h2>
+            <h2 >On Hold</h2>
                 {onHoldCards}
             <h2>Ready to Start</h2>
                 {readyToStartCards}

@@ -14,7 +14,7 @@ export default function CardContainer({handleDeleteUser, userList, onAddNewUser,
     return(
         <>
         
-        <Row xs={2} md={4} className="g-4">
+        <Row style={{'display': 'flex'}} xs={2} md={4} className="g-4">
             {userCards}
         </Row>
 
