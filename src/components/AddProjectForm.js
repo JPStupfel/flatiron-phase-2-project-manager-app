@@ -45,7 +45,13 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
 
     <Form
     className="project-card"
-    onSubmit={handleSubmit} 
+    onSubmit={
+        (e)=>
+        newProject.name && newProject.author && newProject.status ? 
+        handleSubmit(e)
+        : 
+        ((e)=>{e.preventDefault(); alert('fill out all fields')})(e)
+    } 
     >
         <div className="project-list" >
                 <h3><>Project Title:</>
