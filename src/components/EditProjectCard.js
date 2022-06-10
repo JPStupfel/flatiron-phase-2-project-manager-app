@@ -24,7 +24,7 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch, 
     }
    
     function onSetStatus(status){
-        const now = new Date().toDateString();
+        const now = new Date().toLocaleString();
 
         const updatedProject = {...newProject, 'status': status, statusChangeOn: now}
        
