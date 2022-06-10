@@ -20,6 +20,9 @@ export default function DisplayProjectCard({project, handleDelete, handleClickEd
                     <li>
                         Date Created: {fullDate}
                     </li>
+                    
+                        {project.status==='Completed'?<li> {`Date Completed: ${fullDate}`}</li> : null}
+                    
                 </ul>
             </div>
                     
