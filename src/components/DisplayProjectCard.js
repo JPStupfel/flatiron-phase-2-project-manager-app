@@ -4,6 +4,7 @@ import  '../App.css';
 
 export default function DisplayProjectCard({project, handleDelete, handleClickEdit}){
 
+    const fullDate = new Date(project.date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
 
     return(
     <div className="project-card" >
@@ -15,6 +16,9 @@ export default function DisplayProjectCard({project, handleDelete, handleClickEd
                     </li>
                     <li>
                         Project Status: {project.status}
+                    </li>
+                    <li>
+                        Date Created: {fullDate}
                     </li>
                 </ul>
             </div>
