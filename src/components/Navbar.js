@@ -12,7 +12,7 @@ export default function NavBar() {
 
       <Nav fill variant="tabs" >
       <Nav.Item>
-        <Nav.Link exact href="/" eventKey="/">HOME</Nav.Link>
+        <Nav.Link href="/" eventKey="/">HOME</Nav.Link>
       </Nav.Item>
 
       <Nav.Item>

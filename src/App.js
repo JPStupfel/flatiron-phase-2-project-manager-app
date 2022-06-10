@@ -55,10 +55,6 @@ function App() {
     setProjects(updatedProjectList)
   }
 
- 
-
-  
-
 
  
 //helper functions for users page
