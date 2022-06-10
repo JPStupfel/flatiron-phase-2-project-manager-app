@@ -53,7 +53,8 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch, 
                     <UserDropDown
                 buttonTitle={newProject.author}
                 onSetUser={onSetUser} 
-                userList={userList} />
+                userList={userList}
+                userType='Project Creator' />
                     </li>
                     <li>
                     <StatusDropDown

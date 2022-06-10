@@ -77,7 +77,17 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
                 />
                     </li>
                     {
-                    newProject.status==='Working On It' ? <li>Who?</li> : null
+                    newProject.status==='Working On It' ? 
+                    <li>
+                        Who?
+                         <UserDropDown
+                buttonTitle={newProject.author}
+                onSetUser={onSetUser} 
+                userList={userList}
+                userType='Project Creator' />
+
+                    </li> 
+                    : null
                     }
 
                 

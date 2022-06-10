@@ -6,7 +6,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 
 
 
-export default function UserDropDown({onSetUser, buttonTitle, userList}){
+export default function UserDropDown({onSetUser, buttonTitle, userList, userType}){
 
 
     const menuItems = userList.map(
@@ -21,7 +21,7 @@ export default function UserDropDown({onSetUser, buttonTitle, userList}){
 
 
     return(
-    <DropdownButton style={{'borderstyle': 'solid'}} variant="light" id="dropdown-basic-button" title={buttonTitle ? `Creator: ${buttonTitle}` : 'Project Creator: Choose an existing User!'}>
+    <DropdownButton style={{'borderstyle': 'solid'}} variant="light" id="dropdown-basic-button" title={buttonTitle ? `${userType}: ${buttonTitle}` : `${userType}: Choose an existing User!`}>
 
        {menuItems}
 
