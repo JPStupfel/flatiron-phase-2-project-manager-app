@@ -29,6 +29,13 @@ function App() {
     ()=>{fetch('http://localhost:4000/projects').then(r=>r.json()).then(d=>setProjects(d))},[]
   )
 
+  //update projects created for users each time project state is updated
+
+  useEffect(
+    ()=>userList.forEach(e=>handleVerifyProjectCount(e.name)),[projects]
+
+  )
+
 
  
 //helper functions for Projects Page
@@ -40,7 +47,7 @@ function App() {
   function onEditProject(obj){
     const updatedProjectList = projects.map(e=> e.id===obj.id ? obj : e);
     setProjects(updatedProjectList)
-    handleVerifyProjectCount('Buzz Lightyear')
+
   }
 
   function onAddNewProject(newProject){
@@ -48,11 +55,10 @@ function App() {
     setProjects(updatedProjectList)
   }
 
-  //pass a callback to ProjectCard, that uses projects and userList to calc each user's proj created count, and if there's a discrepency, fire a patch function
+ 
 
   
 
-  //handle the patch for users project count
 
  
 //helper functions for users page
@@ -70,12 +76,11 @@ function App() {
   
   }
 
-  //takes teamMember and returns how many projects they've created
+  //take team member and update their project created count based on project state
   function handleVerifyProjectCount(teamMember){
-    const count = projects.filter(e=>e.author === teamMember).length
 
+    const count = projects.filter(e=>e.author === teamMember).length;
     const userData = userList.filter(e=>e.name===teamMember)[0]
-
     const objForPatch = {'Projects Created':count}
 
     //if userData !== count, run a patch request
