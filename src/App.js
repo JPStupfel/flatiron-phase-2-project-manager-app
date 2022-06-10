@@ -40,13 +40,19 @@ function App() {
   function onEditProject(obj){
     const updatedProjectList = projects.map(e=> e.id===obj.id ? obj : e);
     setProjects(updatedProjectList)
-
+    handleVerifyProjectCount('Buzz Lightyear')
   }
 
   function onAddNewProject(newProject){
     const updatedProjectList = [...projects, newProject]
     setProjects(updatedProjectList)
   }
+
+  //pass a callback to ProjectCard, that uses projects and userList to calc each user's proj created count, and if there's a discrepency, fire a patch function
+
+  
+
+  //handle the patch for users project count
 
  
 //helper functions for users page
@@ -63,7 +69,31 @@ function App() {
     setUserList(newUserList)
   
   }
-  
+
+  //takes teamMember and returns how many projects they've created
+  function handleVerifyProjectCount(teamMember){
+    const count = projects.filter(e=>e.author === teamMember).length
+
+    const userData = userList.filter(e=>e.name===teamMember)[0]
+
+    const objForPatch = {'Projects Created':count}
+
+    //if userData !== count, run a patch request
+
+    if (userData['Projects Created']!==count){
+
+      console.log(count, userData['Projects Created'])
+
+      fetch(`http://localhost:4000/users/${userData.id}`, {
+            method: "PATCH",
+            headers: { 'Content-type': 'application/json; charset=UTF-8',},
+            body: JSON.stringify(objForPatch)
+        }).then(r=>r.json()).then(d=>console.log(d))
+        
+
+    }
+
+  }
 
  
   

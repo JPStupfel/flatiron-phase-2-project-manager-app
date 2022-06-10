@@ -69,17 +69,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Goals
-
-Let's boil this down to something really simple.
-
-1. Make status and user, pre-selected options
-   xx 2. Add user field for created projects
-2. When a project is created or completed, patch that user.
-   xx 4. add, delete, user card functionality
-
-then, we can style...like group project cards by status etc.
-
+-App
+|-NavBar
+|
+|-Home
+| |-HomeCarousel
+|
 |-ProjectContainer
 | |-AddProject
 | | |-AddProjectForm

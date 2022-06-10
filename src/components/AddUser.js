@@ -27,7 +27,7 @@ export default function AddUser({onAddNewUser, onCancelAddUser}){
             variant="primary" 
             size="lg"
             onClick={()=>setAddUser((prev)=>!prev)}>
-            Add New User
+            Add New Team Memebr
             </Button>
             </div>
 

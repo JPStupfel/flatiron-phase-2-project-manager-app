@@ -2,7 +2,12 @@ import React, {useState} from "react";
 import DisplayProjectCard from "./DisplayProjectCard";
 import EditProjectCard from "./EditProjectCard";
 
-export default function ProjectCard({project, onClickDeleteButton, onEditProject, userList}){
+export default function ProjectCard({
+    project, 
+    onClickDeleteButton, 
+    onEditProject, 
+    userList,
+    handleVerifyProjectCount}){
 
     const [edit, setEdit] = useState(false)
 
@@ -22,7 +27,6 @@ export default function ProjectCard({project, onClickDeleteButton, onEditProject
             body: JSON.stringify(objForPatch)
         }).then(r=>r.json()).then(d=>onEditProject(d))
         
-        //onClickDeleteButton(id)
         }
   
 
@@ -49,6 +53,7 @@ export default function ProjectCard({project, onClickDeleteButton, onEditProject
             project={project} 
             handlePatch={handlePatch}
             userList={userList}
+            
             />}
             
            
