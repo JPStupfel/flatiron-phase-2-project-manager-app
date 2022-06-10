@@ -12,9 +12,12 @@ import Row from 'react-bootstrap/Row';
 
 function UserCard({user, handleDeleteUser, projects}) {
 
-  const userAuthorshipCount = projects ? projects.filter(e=>e.author===user.name).length : 0
-  console.log(projects)
+  const usersProjects =projects.filter(e=>e.author===user.name)
+
+  const userCompletedProjects = usersProjects.filter(e=>e.status==='Completed')
+  //console.log(projects)
   
+
 function onDelete(event){
   
   fetch(`http://localhost:4000/users/${user.id}`, {method: "DELETE"});
@@ -31,7 +34,7 @@ function onDelete(event){
             <Card.Body>
               <Card.Title>{user.name}</Card.Title>
               <Card.Text>
-                {`${user.name} has created ${userAuthorshipCount} projects.`}
+                {`${user.name} has created ${usersProjects.length } projects, and completed ${userCompletedProjects.length} projects`}
                 
               </Card.Text>
               <button onClick={onDelete}>Delete this Team Member.</button>
