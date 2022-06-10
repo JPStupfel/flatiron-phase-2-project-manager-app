@@ -38,7 +38,6 @@ export default function EditProjectCard({project, handleClickEdit, handlePatch, 
         setNewProject(updatedProject)
     }
 
-    console.log('newProject', newProject)
     return(
         
     <Form

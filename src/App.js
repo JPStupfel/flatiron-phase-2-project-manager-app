@@ -30,12 +30,6 @@ function App() {
     ()=>{fetch('http://localhost:4000/projects').then(r=>r.json()).then(d=>setProjects(d))},[]
   )
 
-  //update projects created for users each time project state is updated
-
-  useEffect(
-    ()=>userList.forEach(e=>handleVerifyProjectCount(e.name)),[projects]
-
-  )
 
 
  
@@ -63,39 +57,15 @@ function App() {
   function onAddNewUser(newUser){
     const newUserList = [...userList, newUser]
     setUserList(newUserList)
-    console.log('Added User')
   }
 
   function handleDeleteUser(id){
-    console.log('handleDeleteUser')
     const newUserList = userList.filter(e=>e.id !== id)
     setUserList(newUserList)
   
   }
 
-  //take team member and update their project created count based on project state
-  function handleVerifyProjectCount(teamMember){
-
-    const count = projects.filter(e=>e.author === teamMember).length;
-    const userData = userList.filter(e=>e.name===teamMember)[0]
-    const objForPatch = {'Projects Created':count}
-
-    //if userData !== count, run a patch request
-
-    if (userData['Projects Created']!==count){
-
-      console.log(count, userData['Projects Created'])
-
-      fetch(`http://localhost:4000/users/${userData.id}`, {
-            method: "PATCH",
-            headers: { 'Content-type': 'application/json; charset=UTF-8',},
-            body: JSON.stringify(objForPatch)
-        }).then(r=>r.json()).then(d=>console.log(d))
-        
-
-    }
-
-  }
+  
 
  
   

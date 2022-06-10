@@ -15,7 +15,6 @@ function UserCard({user, handleDeleteUser, projects}) {
   const usersProjects =projects.filter(e=>e.author===user.name)
 
   const userCompletedProjects = usersProjects.filter(e=>e.status==='Completed')
-  //console.log(projects)
   
 
 function onDelete(event){

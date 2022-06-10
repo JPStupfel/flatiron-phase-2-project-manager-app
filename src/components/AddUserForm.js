@@ -6,7 +6,7 @@ import AddUser from "./AddUser";
 export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser}){
 
 
-    const [newUser, setNewUser] = useState({'name':'', 'image': '', 'Projects Created':0 })
+    const [newUser, setNewUser] = useState({'name':'', 'image': '', })
 
     function handleChangeInput(event){
         const updatedUser = {...newUser, [event.target.name]: event.target.value}
@@ -28,7 +28,6 @@ export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser})
 
     }
 
-   console.log(newUser)
 
     return(<>
     <Form

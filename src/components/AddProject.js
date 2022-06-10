@@ -1,5 +1,4 @@
 import React from "react";
-import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import AddProjectForm from "./AddProjectForm";
 
@@ -25,7 +24,7 @@ export default function AddProject({addProject, setAddProject, onAddNewProject, 
                 variant="primary" 
                 size="lg"
                 onClick={()=>setAddProject((prev)=>!prev)}>
-                'Add New Project'
+                Add New Project
                 </Button>
             </div>}
         </div>

@@ -25,7 +25,7 @@ export default function ProjectCard({
             method: "PATCH",
             headers: { 'Content-type': 'application/json; charset=UTF-8',},
             body: JSON.stringify(objForPatch)
-        }).then(r=>r.json()).then(d=>{onEditProject(d);console.log('patch',d)}).catch((error)=>alert(error))
+        }).then(r=>r.json()).then(d=>{onEditProject(d)}).catch((error)=>alert(error))
         
         }
   
