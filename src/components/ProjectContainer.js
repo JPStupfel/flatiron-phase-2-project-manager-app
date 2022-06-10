@@ -15,8 +15,9 @@ export default function ProjectContainer({
 
     const [addProject, setAddProject] = useState(false)
 
+    const notCompleteProjects = projects.filter(e=>e.status !== 'Completed')
 
-    const projectCards = projects.map(
+    const projectCards = notCompleteProjects.map(
         e=>
         <ProjectCard
          key={e.id} 

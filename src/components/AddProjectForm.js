@@ -28,10 +28,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
         setNewProject(updatedProject)
     }
 
-    function onSetOperator(user){
-        const updatedProject = {...newProject, 'operator': user}
-        setNewProject(updatedProject)
-    }
+    
 
     function handleSubmit(event){
         event.preventDefault()
@@ -82,20 +79,7 @@ export default function AddProjectForm({onCancelAdd, onAddNewProject, setAddProj
                 onSetStatus={onSetStatus}
                 />
                     </li>
-                    {
-                    newProject.status==='Working On It' ? 
-                    <li>
-                        Who is working on it?
-                         <UserDropDown
-                buttonTitle={newProject.author}
-                onSetUser={onSetUser} 
-                userList={userList}
-                userType='Being worked on by'
-                />
-
-                    </li> 
-                    : null
-                    }
+                    
 
                 
 
