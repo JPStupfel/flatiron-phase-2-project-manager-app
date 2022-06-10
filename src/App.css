@@ -14,9 +14,10 @@
 
 .project-card {
   display:flex;
-  border-style: solid;
+  border-style:ridge;
   border-width: 10px;
   border-color: grey;
+  margin-top: 10px;
 }
 
 .add-something-button{
@@ -29,7 +30,14 @@
   
 }
 
-
+.App{ 
+  background-color: black ;
+  background: url(https://tipstrategies.com/wp-content/uploads/2019/01/Fort-Worth-Skyline-Purchased_Fotolia_43685966-USE-FOR-FORT-WORTH.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 
 

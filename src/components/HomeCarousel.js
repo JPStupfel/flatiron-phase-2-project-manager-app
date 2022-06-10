@@ -11,8 +11,9 @@ export default function HomeCarousel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Create a Project</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Welcome to Project Land</h3>
+          <p>Add Yourself to the TEAM MEMBERS Page</p>
+          <p>To Get Started.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -23,8 +24,8 @@ export default function HomeCarousel() {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Create a Project</h3>
+          <p>View our Projects Page to Manage Projects.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -34,11 +35,9 @@ export default function HomeCarousel() {
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+        <Carousel.Caption style={{'background-color':'white', 'color':'black', 'alignSelf': 'flex-start', 'display':'flex'}}>
+          <h3>See Completed Projects. Navigate to COMPLETED PROJECTS to see what we've already done!</h3>
+          
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

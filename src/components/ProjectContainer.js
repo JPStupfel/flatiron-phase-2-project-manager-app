@@ -71,7 +71,7 @@ export default function ProjectContainer({
 
     
     return(
-        <div>
+        <div className='App'>
             <h1>Projects</h1>
             <h2>On Hold</h2>
                 {onHoldCards}

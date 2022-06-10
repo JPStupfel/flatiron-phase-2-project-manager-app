@@ -32,7 +32,7 @@ export default function ArchiveContainer({
 
     
     return(
-        <div>
+        <div className="App">
             <h1>Completed Projects</h1>
             {projectCards}
         </div>

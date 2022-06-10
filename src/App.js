@@ -74,7 +74,7 @@ function App() {
 
   return (
     <>
-    <NavBar />
+    <NavBar  className='html' />
     <Switch>
     
 
