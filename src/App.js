@@ -28,6 +28,7 @@ function App() {
   //setCurrentUser to sessionStorage.token any time anything is rendered
   
   const newCurrentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : ''
+
   useEffect(
     ()=>setCurrentUser(newCurrentUser),[]
   )
@@ -43,6 +44,10 @@ function App() {
     ()=>{fetch('http://localhost:4000/projects').then(r=>r.json()).then(d=>setProjects(d))},[]
   )
 
+  function handleLogout(){
+    sessionStorage.setItem('token', '');
+    setCurrentUser('')
+  }
 
   function handleUserLogin(obj){
     sessionStorage.setItem('token', JSON.stringify(obj));
@@ -91,7 +96,7 @@ console.log('App',currentUser)
 
   return (
     <>
-    <NavBar className='html' />
+    <NavBar handleLogout={handleLogout} currentUser={currentUser} className='html' />
     
     
     <Switch>
@@ -141,13 +146,11 @@ console.log('App',currentUser)
       />
 
 
+      
 
       </Route>
-
       <Route path="/login">
-
       <Login handleUserLogin={handleUserLogin} userList={userList} />
-
       </Route>
 
 
