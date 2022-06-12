@@ -3,7 +3,7 @@ import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 
 
-export default function NavBar() {
+export default function NavBar({currentUser}) {
     
 
     return (
@@ -31,7 +31,6 @@ export default function NavBar() {
       <Nav.Item>
         <Nav.Link href='/login' eventKey="/login">Login</Nav.Link>
       </Nav.Item>
-   
     </Nav>
 
         </>

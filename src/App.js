@@ -77,13 +77,14 @@ function App() {
   
 
  
-  
 
   
 
   return (
     <>
-    <NavBar  className='html' />
+    <NavBar currentUser={currentUser}  className='html' />
+    
+    
     <Switch>
     
 
