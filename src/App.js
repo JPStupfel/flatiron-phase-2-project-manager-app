@@ -143,6 +143,8 @@ console.log('App',currentUser)
       onEditProject={onEditProject}
       onAddNewProject={onAddNewProject}
       userList={userList}
+      currentUser={currentUser}
+
       />
 
 

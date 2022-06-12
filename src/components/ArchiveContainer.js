@@ -10,6 +10,8 @@ export default function ArchiveContainer({
     onEditProject, 
     userList,
     onAddNewProject,
+    currentUser
+
 
 }){
 
@@ -24,6 +26,8 @@ export default function ArchiveContainer({
          onClickDeleteButton={onClickDeleteButton}
          onEditProject={onEditProject}
          userList={userList}
+         currentUser={currentUser}
+
          />
         )
 
