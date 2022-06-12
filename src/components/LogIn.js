@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import AddUser from "./AddUser";
 
-export default function Login({onAddloginUser, onCancelAddUser}){
+export default function Login({handleUserLogin, onCancelAddUser, userList}){
 
 
     const [loginUser, setLoginUser] = useState({'name':'','password': '' })
@@ -16,7 +16,11 @@ export default function Login({onAddloginUser, onCancelAddUser}){
 
     function handleSubmit(event){
         event.preventDefault()
-        console.log('will log in',loginUser)
+        const attempter = userList.filter(e=> e.name===loginUser.name && e.password === loginUser.password)
+        console.log(attempter)
+        attempter ?  handleUserLogin(loginUser) : alert('wrong')
+
+
 
     }
 

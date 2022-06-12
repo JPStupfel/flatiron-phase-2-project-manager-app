@@ -19,7 +19,7 @@ function App() {
 
   const [projects, setProjects] = useState([])
 
-  const [currentUser, setCurrentUser] = useState(false)
+  const [currentUser, setCurrentUser] = useState('')
 
   
   
@@ -36,7 +36,11 @@ function App() {
   )
 
 
-
+  function handleUserLogin(obj){
+    setCurrentUser(obj.name);
+    
+    console.log(currentUser, 'is now logged in')
+  }
  
 //helper functions for Projects Page
   function onClickDeleteButton(id){
@@ -55,7 +59,7 @@ function App() {
     setProjects(updatedProjectList)
   }
 
-
+  
  
 //helper functions for users page
 
@@ -130,9 +134,10 @@ function App() {
 
       <Route path="/login">
 
-      <Login />
+      <Login handleUserLogin={handleUserLogin} userList={userList} />
 
       </Route>
+
 
       </Switch>
     </>
