@@ -19,9 +19,8 @@ function App() {
 
   const [projects, setProjects] = useState([])
 
-  //const [currentUser, setCurrentUser] = useState('')
-
-  const currentUser = JSON.parse(sessionStorage.token)
+  
+  //const currentUser = JSON.parse(sessionStorage.token)
   
   //setCurrentUser to sessionStorage.token any time anything is rendered
   
@@ -76,17 +75,16 @@ function App() {
   
   }
 
-  // let x = sessionStorage.token
-  // let y = JSON.parse(x)
 
-  console.log('currentUser=,',currentUser)
+
+  
 
 
   
 
   return (
     <>
-    <NavBar currentUser={currentUser}  className='html' />
+    <NavBar className='html' />
     
     
     <Switch>
@@ -117,7 +115,7 @@ function App() {
           onEditProject={onEditProject}
           onAddNewProject={onAddNewProject}
           userList={userList}
-          currentUser={currentUser}
+          
            />
 
           

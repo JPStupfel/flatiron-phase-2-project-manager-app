@@ -3,7 +3,7 @@ import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
 
 
-export default function NavBar({currentUser}) {
+export default function NavBar({}) {
     
 
     return (

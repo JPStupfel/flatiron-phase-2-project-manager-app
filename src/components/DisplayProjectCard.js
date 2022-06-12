@@ -13,7 +13,7 @@ export default function DisplayProjectCard({project, handleDelete, handleClickEd
                     <button onClick={()=>handleDelete(project.id)} >Delete This Project</button>
                     </>
 
-    const currentUser = JSON.parse(sessionStorage.token)
+    const currentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : ''
 
     
     return(
