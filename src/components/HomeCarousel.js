@@ -10,7 +10,7 @@ export default function HomeCarousel() {
           src="https://www.triaxtec.com/wp-content/uploads/2018/02/shutterstock_178613660.jpg"
           alt="First slide"
         />
-        <Carousel.Caption>
+        <Carousel.Caption style={{'background-color':'white', 'color':'black'}}>
           <h3>Welcome to Project Land</h3>
           <p>Add Yourself to the TEAM MEMBERS Page</p>
           <p>To Get Started.</p>

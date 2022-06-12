@@ -6,7 +6,7 @@ import AddUser from "./AddUser";
 export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser}){
 
 
-    const [newUser, setNewUser] = useState({'name':'', 'image': '', })
+    const [newUser, setNewUser] = useState({'name':'', 'image': '','password': '' })
 
     function handleChangeInput(event){
         const updatedUser = {...newUser, [event.target.name]: event.target.value}
@@ -63,6 +63,20 @@ export default function AddUserForm({onAddNewUser, onCancelAddUser, setAddUser})
             placeholder="Provide an image URL"
             onChange={handleChangeInput}
             value={newUser.author}
+            />
+        
+        </Form.Group>
+
+        <Form.Group    
+        className="mb-3" 
+        >
+            <Form.Label>Password</Form.Label>
+            <Form.Control 
+            name='password' 
+            type="text" 
+            placeholder="Provide password"
+            onChange={handleChangeInput}
+            value={newUser.password}
             />
         
         </Form.Group>
