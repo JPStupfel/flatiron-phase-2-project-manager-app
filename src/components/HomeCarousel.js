@@ -10,7 +10,7 @@ export default function HomeCarousel() {
           src="https://www.triaxtec.com/wp-content/uploads/2018/02/shutterstock_178613660.jpg"
           alt="First slide"
         />
-        <Carousel.Caption style={{'background-color':'white', 'color':'black'}}>
+        <Carousel.Caption style={{'backgroundColor':'white', 'color':'black'}}>
           <h3>Welcome to Project Land</h3>
           <p>Add Yourself to the TEAM MEMBERS Page</p>
           <p>To Get Started.</p>
@@ -35,7 +35,7 @@ export default function HomeCarousel() {
           alt="Third slide"
         />
 
-        <Carousel.Caption style={{'background-color':'white', 'color':'black', 'alignSelf': 'flex-start', 'display':'flex'}}>
+        <Carousel.Caption style={{'backgroundColor':'white', 'color':'black', 'alignSelf': 'flex-start', 'display':'flex'}}>
           <h3>See Completed Projects. Navigate to COMPLETED PROJECTS to see what we've already done!</h3>
           
         </Carousel.Caption>

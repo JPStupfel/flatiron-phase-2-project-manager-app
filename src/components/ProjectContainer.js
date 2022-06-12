@@ -13,9 +13,10 @@ export default function ProjectContainer({
     onEditProject, 
     userList,
     onAddNewProject,
+    currentUser
 
 }){
-
+    let x = currentUser
     const [addProject, setAddProject] = useState(false)
 
     const notCompleteProjects = projects.filter(e=>e.status !== 'Completed')
@@ -28,6 +29,7 @@ export default function ProjectContainer({
          onClickDeleteButton={onClickDeleteButton}
          onEditProject={onEditProject}
          userList={userList}
+         currentUser={currentUser}
          />
         )
 
@@ -66,7 +68,7 @@ export default function ProjectContainer({
                     )
                 
 
-
+                        console.log('project container', currentUser)
         function onCancelAdd(){
             setAddProject(false)
           }

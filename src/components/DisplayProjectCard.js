@@ -2,12 +2,22 @@ import React from "react";
 import  '../App.css';
 
 
-export default function DisplayProjectCard({project, handleDelete, handleClickEdit}){
+export default function DisplayProjectCard({project, handleDelete, handleClickEdit }){
 
     const fullDate = (date)=> new Date(date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
     const fullTime = (date)=> new Date(date).toLocaleTimeString()
 
+    const buttons= 
+                    <>
+                    <button onClick={handleClickEdit} >Edit This Project</button>
+                    <button onClick={()=>handleDelete(project.id)} >Delete This Project</button>
+                    </>
+
+    const currentUser = JSON.parse(sessionStorage.token)
+
+    
     return(
+
     <div className="project-card" >
             <div className="project-list">
                 <h3>{project.name}</h3>
@@ -28,11 +38,11 @@ export default function DisplayProjectCard({project, handleDelete, handleClickEd
             </div>
                     
             <div className="project-card-buttons">
+            {currentUser.name === project.author ? buttons : null }
 
-                <button onClick={handleClickEdit} >Edit This Project</button>
-
-                <button onClick={()=>handleDelete(project.id)} >Delete This Project</button>
+                
         </div>
     </div>
+
     )
 }

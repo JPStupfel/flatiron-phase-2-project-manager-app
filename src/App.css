@@ -2,7 +2,7 @@
   display: inline-block; 
   width: 80%;
   height: 100%;
-  background-color: beige;
+  backgroundColor: beige;
 
   }
 
@@ -21,7 +21,7 @@
 }
 
 .add-something-button{
-  background-color: aliceblue;
+  backgroundColor: aliceblue;
   color: black;
   align-self: center;
   display: flex;

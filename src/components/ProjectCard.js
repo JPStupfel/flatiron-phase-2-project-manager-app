@@ -7,7 +7,8 @@ export default function ProjectCard({
     onClickDeleteButton, 
     onEditProject, 
     userList,
-    handleVerifyProjectCount}){
+    handleVerifyProjectCount,
+    currentUser}){
 
     const [edit, setEdit] = useState(false)
 
@@ -36,7 +37,7 @@ export default function ProjectCard({
 
 
 
-    
+    console.log('from project card', currentUser)
 
     return(
         <div>
@@ -46,6 +47,7 @@ export default function ProjectCard({
             handleDelete={handleDelete} 
             project={project} 
             handleClickEdit={handleClickEdit}
+            currentUser='Johnny'
             /> 
             : 
             <EditProjectCard 
@@ -54,6 +56,8 @@ export default function ProjectCard({
             handlePatch={handlePatch}
             userList={userList}
             
+
+           
             />}
             
            
