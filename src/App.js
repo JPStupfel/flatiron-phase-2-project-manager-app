@@ -23,6 +23,11 @@ function App() {
 
   
   
+  //setCurrentUser to sessionStorage.token any time anything is rendered
+  useEffect(
+    ()=>sessionStorage.token ? setCurrentUser(sessionStorage.token) : null
+  )
+
 
   
 //fetch users
@@ -37,9 +42,8 @@ function App() {
 
 
   function handleUserLogin(obj){
-    setCurrentUser(obj.name);
+    sessionStorage.setItem('token', JSON.stringify(obj));
     
-    console.log(currentUser, 'is now logged in')
   }
  
 //helper functions for Projects Page
@@ -76,7 +80,8 @@ function App() {
 
   
 
- 
+  console.log(currentUser, 'is now logged in')
+
 
   
 
