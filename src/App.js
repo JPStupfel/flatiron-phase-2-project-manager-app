@@ -9,6 +9,7 @@ import ProjectContainer from './components/ProjectContainer';
 import AddProject from './components/AddProject';
 import AddUser from './components/AddUser';
 import ArchiveContainer from './components/ArchiveContainer';
+import Login from './components/LogIn';
 
 
 
@@ -17,6 +18,10 @@ function App() {
   const [userList, setUserList] = useState([])
 
   const [projects, setProjects] = useState([])
+
+  const [currentUser, setCurrentUser] = useState(false)
+
+  
   
 
   
@@ -120,6 +125,12 @@ function App() {
       />
 
 
+
+      </Route>
+
+      <Route path="/login">
+
+      <Login />
 
       </Route>
 

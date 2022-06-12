@@ -27,6 +27,10 @@ export default function NavBar() {
       <Nav.Item>
         <Nav.Link href='/archives' eventKey="/archives">COMPLETED PROJECTS</Nav.Link>
       </Nav.Item>
+
+      <Nav.Item>
+        <Nav.Link href='/login' eventKey="/login">Login</Nav.Link>
+      </Nav.Item>
    
     </Nav>
 
