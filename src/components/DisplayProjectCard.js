@@ -2,7 +2,7 @@ import React from "react";
 import  '../App.css';
 
 
-export default function DisplayProjectCard({project, handleDelete, handleClickEdit }){
+export default function DisplayProjectCard({project, handleDelete, handleClickEdit, currentUser }){
 
     const fullDate = (date)=> new Date(date).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
     const fullTime = (date)=> new Date(date).toLocaleTimeString()
@@ -13,9 +13,10 @@ export default function DisplayProjectCard({project, handleDelete, handleClickEd
                     <button onClick={()=>handleDelete(project.id)} >Delete This Project</button>
                     </>
 
-    const currentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : ''
+    //const currentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : ''
+    //const currentUser = ''
 
-    
+    console.log('DisplayCard,', currentUser)
     return(
 
     <div className="project-card" >

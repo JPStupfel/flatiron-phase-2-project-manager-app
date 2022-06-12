@@ -19,11 +19,18 @@ function App() {
 
   const [projects, setProjects] = useState([])
 
+  const [currentUser, setCurrentUser] = useState('')
+
+
   
   //const currentUser = JSON.parse(sessionStorage.token)
   
   //setCurrentUser to sessionStorage.token any time anything is rendered
   
+  const newCurrentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : ''
+  useEffect(
+    ()=>setCurrentUser(newCurrentUser),[]
+  )
 
   
 //fetch users
@@ -39,8 +46,8 @@ function App() {
 
   function handleUserLogin(obj){
     sessionStorage.setItem('token', JSON.stringify(obj));
-    //setCurrentUser(JSON.parse(sessionStorage.token))
-    console.log(obj)
+
+
   }
  
 //helper functions for Projects Page
@@ -78,7 +85,7 @@ function App() {
 
 
   
-
+console.log('App',currentUser)
 
   
 
@@ -115,6 +122,7 @@ function App() {
           onEditProject={onEditProject}
           onAddNewProject={onAddNewProject}
           userList={userList}
+          currentUser={currentUser}
           
            />
 

@@ -13,7 +13,7 @@ export default function ProjectContainer({
     onEditProject, 
     userList,
     onAddNewProject,
-    
+    currentUser
 
 }){
     const [addProject, setAddProject] = useState(false)
@@ -28,6 +28,7 @@ export default function ProjectContainer({
          onClickDeleteButton={onClickDeleteButton}
          onEditProject={onEditProject}
          userList={userList}
+         currentUser={currentUser}
          />
         )
 
@@ -40,6 +41,8 @@ export default function ProjectContainer({
              onClickDeleteButton={onClickDeleteButton}
              onEditProject={onEditProject}
              userList={userList}
+             currentUser={currentUser}
+
              /> : null
             )
 
@@ -51,6 +54,8 @@ export default function ProjectContainer({
                  onClickDeleteButton={onClickDeleteButton}
                  onEditProject={onEditProject}
                  userList={userList}
+                 currentUser={currentUser}
+
                  /> : null
                 )
 
@@ -62,6 +67,8 @@ export default function ProjectContainer({
                      onClickDeleteButton={onClickDeleteButton}
                      onEditProject={onEditProject}
                      userList={userList}
+                     currentUser={currentUser}
+
                      /> : null
                     )
                 
@@ -71,7 +78,8 @@ export default function ProjectContainer({
           }
 
 
-    
+          console.log('ProjContainer,', currentUser)
+
     return(
         <div className='App'>
             <h1>Projects</h1>
