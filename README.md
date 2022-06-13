@@ -1,77 +1,37 @@
 # Project Land
 
-Project Land is a
+Project Land is a project management app where Project Managers can keep track of projects and check their progress against their rivals.
 
-# Getting Started with Create React App
+## Installation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For mac users, navigate to the directory you would like to use and run the following code in your terminal:
 
-## Available Scripts
+$ git clone https://github.com/JPStupfel/flatiron-phase-2-project-manager-app
+$ cd my-app
+$ npm install
+$ npm start
 
-In the project directory, you can run:
+Next in a separate terminal window, run the following code to initiate the server:
 
-### `npm start`
+$ git clone git@github.com:JPStupfel/flatiron-phase-2-project-manager-server.git
+$ cd server
+$ npm install
+$ npm run server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Outline of Functionality of site
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can:
 
-### `npm test`
+1. Navigate to three separate pages via client side routing.
+2. Add and delete new Members
+3. Add, delete and edit projects.
+4. When you add a team member, they show up on the choose team member drop down menu as potential authors
+5. when you add, delete or modify a project's status, the projects created and completed count for each team member is updated.
+6. when adding a new project, includes data validation before you can submit.
+7. When you mark a project as complete, it removes that project from the projects page and adds it to the archives page.
+8. You can login as user in order to edit projects created by that user.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Map of React Component Higherarchy
 
 -App
 |-NavBar
@@ -101,52 +61,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 |-UserCard
 |-AddUser
 |-AddUserForm
+|-Login
 
 Functionality:
 
-You can:
+# Credits
 
-1. Navigate to three separate pages via client side routing.
-2. Add and delete new Members
-3. Add, delete and edit projects.
-4. When you add a team member, they show up on the choose team member drop down menu as potential authors
-5. when you add, delete or modify a project's status, the projects created and completed count for each team member is updated.
-6. when adding a new project, includes data validation before you can submit.
-7. When you mark a project as complete, it removes that project from the projects page and adds it to the archives page.
+For this project I used images from the following locations:
 
-# Foobar
+0: "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png"
+1: "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png"
+2: "https://www.pinkvilla.com/imageresize/johnny_depp_amber_heard_2.jpeg?width=752&format=webp&t=pvorg"
+3: "https://media.vanityfair.com/photos/603e71d829e5b22a654c9679/master/pass/1133728517"
+4: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg"
+5: "https://media.pitchfork.com/photos/616d9395b645e845dbc8ef90/2:1/w_2560%2Cc_limit/Jack-White.jpg"
+6: "https://www.biography.com/.image/t_share/MTgwNTAzNzIwNTQ5Njg4OTc2/gettyimages-1202156250-copy.jpg"
+7: "https://talksport.com/wp-content/uploads/sites/5/2021/06/crop-822912.jpg?strip=all&w=836&quality=100"
+8: "https://www.triaxtec.com/wp-content/uploads/2018/02/shutterstock_178613660.jpg"
+9: "https://www.simplilearn.com/ice9/free_resources_article_thumb/PM.jpg"
+10: "https://cloudinary.hbs.edu/hbsit/image/upload/s--gAAnShcM--/f_auto,c_fill,h_375,w_750,/v20200101/63FA86712AEE497FD9F306C31133994E.jpg"
 
-Foobar is a Python library for dealing with word pluralization.
-
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
-
-## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+I also used the Bootstrap API. Which can be found at https://getbootstrap.com/

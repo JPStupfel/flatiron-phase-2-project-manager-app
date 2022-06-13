@@ -99,8 +99,9 @@ function App() {
 
   
 
-  
+  let images = userList.map(e=>e.image)
 
+  console.log(images)
   return (
     <>
     <NavBar handleLogout={handleLogout} currentUser={currentUser} className='html' />
