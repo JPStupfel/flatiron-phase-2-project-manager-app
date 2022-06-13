@@ -21,17 +21,11 @@ function App() {
 
   const [currentUser, setCurrentUser] = useState('')
 
+  
 
-  
-  //const currentUser = JSON.parse(sessionStorage.token)
-  
-  //setCurrentUser to sessionStorage.token any time anything is rendered
-  
+  //use effect for on each load of app component because otherwise upon refresh currentuser state will forget
   const newCurrentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : ''
-
-  useEffect(
-    ()=>setCurrentUser(newCurrentUser),[]
-  )
+  
 
   
 //fetch users
@@ -43,6 +37,20 @@ function App() {
   useEffect( 
     ()=>{fetch('http://localhost:4000/projects').then(r=>r.json()).then(d=>setProjects(d))},[]
   )
+
+
+  useEffect(
+
+    //only if userList.filter(e=> e.name === sessionStorage.token.name)[0].password === sessionStorage.token.password
+    ()=>{
+    let user = userList.filter(e=>e.name===newCurrentUser.name)[0]
+    user && user.password === newCurrentUser.password ? setCurrentUser(newCurrentUser) : setCurrentUser('')
+    },[userList]
+     
+  )
+
+
+  //helper functions for logging in and out
 
   function handleLogout(){
     sessionStorage.setItem('token', '');
@@ -90,7 +98,6 @@ function App() {
 
 
   
-console.log('App',currentUser)
 
   
 

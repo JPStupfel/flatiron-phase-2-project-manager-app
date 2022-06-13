@@ -16,7 +16,6 @@ export default function DisplayProjectCard({project, handleDelete, handleClickEd
     //const currentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : ''
     //const currentUser = ''
 
-    console.log('DisplayCard,', currentUser)
     return(
 
     <div className="project-card" >

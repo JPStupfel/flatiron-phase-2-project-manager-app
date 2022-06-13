@@ -38,7 +38,6 @@ export default function ProjectCard({
 
 
 
-    console.log('ProjectCard,', currentUser)
 
 
     return(

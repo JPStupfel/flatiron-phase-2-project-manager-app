@@ -78,7 +78,6 @@ export default function ProjectContainer({
           }
 
 
-          console.log('ProjContainer,', currentUser)
 
     return(
         <div className='App'>

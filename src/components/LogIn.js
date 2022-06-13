@@ -17,12 +17,9 @@ export default function Login({handleUserLogin, onCancelAddUser, userList}){
     function handleSubmit(event){
         event.preventDefault()
         const attempter = userList.filter(e=> e.name===loginUser.name && e.password === loginUser.password)
-        console.log('login attempter, ',attempter)
         attempter ?  handleUserLogin(loginUser) : alert('wrong')
 
-//if attempter works run   sessionStorage.setItem('token', JSON.stringify(name:'',password:''));
-//then, all add app state for  sessionStorage.token
-//conditionally render something based on sessionStorage.token
+
 
 
     }
