@@ -1,9 +1,12 @@
 import Carousel from 'react-bootstrap/Carousel';
 import React from 'react';
+import  '../App.css';
+
+
 
 export default function HomeCarousel() {
   return (
-    <Carousel>
+    <Carousel id='Carousel'>
       <Carousel.Item>
         <img
           className="d-block w-100"

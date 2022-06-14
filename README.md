@@ -29,7 +29,7 @@ You can:
 5. when you add, delete or modify a project's status, the projects created and completed count for each team member is updated.
 6. when adding a new project, includes data validation before you can submit.
 7. When you mark a project as complete, it removes that project from the projects page and adds it to the archives page.
-8. You can login as user in order to edit projects created by that user.
+8. You can login as user in order to edit projects created by that user, or to delete that users account.
 9. You can log in as admin and edit any project, and delete any user.
 
 # Map of React Component Higherarchy
