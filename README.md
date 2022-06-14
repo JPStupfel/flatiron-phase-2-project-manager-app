@@ -6,17 +6,21 @@ Project Land is a project management app where Project Managers can keep track o
 
 For mac users, navigate to the directory you would like to use and run the following code in your terminal:
 
+```
 $ git clone git@github.com:JPStupfel/flatiron-phase-2-project-manager-app.git
 $ cd my-app
 $ npm install
 $ npm start
+```
 
 Next in a separate terminal window, run the following code to initiate the server:
 
+```
 $ git clone git@github.com:JPStupfel/flatiron-phase-2-project-manager-server.git
 $ cd server
 $ npm install
 $ npm run server
+```
 
 # Outline of Functionality of site
 
