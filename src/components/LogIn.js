@@ -1,10 +1,13 @@
 import React, {useState} from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import {Link, Routes, Route, useHistory} from 'react-router-dom';
+
 
 export default function Login({handleUserLogin, onCancelAddUser, userList}){
 
-
+    let history = useHistory()
+    
     const [loginUser, setLoginUser] = useState({'name':'','password': '' })
 
     function handleChangeInput(event){
@@ -15,9 +18,14 @@ export default function Login({handleUserLogin, onCancelAddUser, userList}){
 
     function handleSubmit(event){
         event.preventDefault()
-        const attempter = userList.filter(e=> e.name===loginUser.name && e.password === loginUser.password)
-        attempter ?  handleUserLogin(loginUser) : alert('wrong')
 
+        const attempter = userList.filter(e=> e.name===loginUser.name && e.password === loginUser.password);
+        
+        attempter ?  handleUserLogin(loginUser) : alert('wrong')
+        
+        history.push('/')
+
+       
 
 
 

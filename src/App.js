@@ -59,8 +59,7 @@ function App() {
 
   function handleUserLogin(obj){
     sessionStorage.setItem('token', JSON.stringify(obj));
-
-
+    setCurrentUser(obj)
   }
  
 //helper functions for Projects Page
