@@ -36,6 +36,10 @@ You can:
 8. You can login as user in order to edit projects created by that user, or to delete that users account.
 9. You can log in as admin and edit any project, and delete any user.
 
+# Video demonstration
+
+https://youtu.be/XtmIDGHPDrA
+
 # Map of React Component Higherarchy
 
 ```
