@@ -38,6 +38,7 @@ You can:
 
 # Map of React Component Higherarchy
 
+```
 -App
 |-NavBar
 |
@@ -67,6 +68,7 @@ You can:
 |- AddUser
 |- AddUserForm
 |-Login
+```
 
 Functionality:
 
