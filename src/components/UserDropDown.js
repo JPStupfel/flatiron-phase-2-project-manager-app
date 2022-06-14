@@ -21,7 +21,7 @@ export default function UserDropDown({onSetUser, buttonTitle, userList, userType
 
 
     return(
-    <DropdownButton style={{'borderstyle': 'solid'}} variant="light" id="dropdown-basic-button" title={buttonTitle ? `${userType}: ${buttonTitle}` : `${userType}: Choose an existing User!`}>
+    <DropdownButton style={{'borderstyle': 'solid'}} variant="light" id="dropdown-basic-button" title={buttonTitle ? `Creator: ${buttonTitle}` : `${userType}: Choose an existing User!`}>
 
        {menuItems}
 

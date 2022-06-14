@@ -6,7 +6,7 @@ Project Land is a project management app where Project Managers can keep track o
 
 For mac users, navigate to the directory you would like to use and run the following code in your terminal:
 
-$ git clone https://github.com/JPStupfel/flatiron-phase-2-project-manager-app
+$ git clone git@github.com:JPStupfel/flatiron-phase-2-project-manager-app.git
 $ cd my-app
 $ npm install
 $ npm start
@@ -58,9 +58,9 @@ You can:
 |
 |
 |-CardContainer
-|-UserCard
-|-AddUser
-|-AddUserForm
+|- UserCard
+|- AddUser
+|- AddUserForm
 |-Login
 
 Functionality:
