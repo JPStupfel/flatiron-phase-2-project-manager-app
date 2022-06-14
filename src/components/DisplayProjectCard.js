@@ -38,7 +38,7 @@ export default function DisplayProjectCard({project, handleDelete, handleClickEd
             </div>
                     
             <div className="project-card-buttons">
-            {currentUser.name === project.author ? buttons : null }
+            {currentUser.name === project.author || currentUser.name === 'admin'? buttons : null }
 
                 
         </div>
