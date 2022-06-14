@@ -40,7 +40,7 @@ function App() {
 
   useEffect(
 
-    //only if userList.filter(e=> e.name === sessionStorage.token.name)[0].password === sessionStorage.token.password
+    //only if user in session storage is either on the userList or is Admin, both with correct password, setCurrentUser to that upon refresh
     ()=>{
     const newCurrentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : '';
 
@@ -51,7 +51,7 @@ function App() {
     const isUser = user && user.password === newCurrentUser.password 
 
     isUser || isAdmin ? setCurrentUser(newCurrentUser) : setCurrentUser('')
-    },[userList]
+    },[]
      
   )
 
