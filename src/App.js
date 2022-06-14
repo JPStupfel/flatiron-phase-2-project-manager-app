@@ -48,11 +48,15 @@ function App() {
 
     const user = userList.filter(e=>e.name===newCurrentUser.name)[0]
 
-    const isUser = user && user.password === newCurrentUser.password 
+    const isUser = user && user.password === newCurrentUser.password ? true : false
 
     isUser || isAdmin ? setCurrentUser(newCurrentUser) : setCurrentUser('')
-    },[]
+    
+    console.log(isUser)
+  
+  },[userList]
      
+   
   )
 
 
@@ -106,7 +110,6 @@ function App() {
 
   let images = userList.map(e=>e.image)
 
-  console.log(images)
   return (
     <>
     <NavBar handleLogout={handleLogout} currentUser={currentUser} className='html' />
@@ -125,6 +128,7 @@ function App() {
         onAddNewUser={onAddNewUser}
         handleDeleteUser={handleDeleteUser}
         projects={projects}
+        currentUser={currentUser}
          />
        
 
