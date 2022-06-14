@@ -24,7 +24,6 @@ function App() {
   
 
   //use effect for on each load of app component because otherwise upon refresh currentuser state will forget
-  const newCurrentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : ''
   
 
   
@@ -43,8 +42,15 @@ function App() {
 
     //only if userList.filter(e=> e.name === sessionStorage.token.name)[0].password === sessionStorage.token.password
     ()=>{
-    let user = userList.filter(e=>e.name===newCurrentUser.name)[0]
-    user && user.password === newCurrentUser.password ? setCurrentUser(newCurrentUser) : setCurrentUser('')
+    const newCurrentUser =  sessionStorage.token ? JSON.parse(sessionStorage.token) : '';
+
+    const  isAdmin = newCurrentUser.name === 'admin' && newCurrentUser.password === '123'
+
+    const user = userList.filter(e=>e.name===newCurrentUser.name)[0]
+
+    const isUser = user && user.password === newCurrentUser.password 
+
+    isUser || isAdmin ? setCurrentUser(newCurrentUser) : setCurrentUser('')
     },[userList]
      
   )
