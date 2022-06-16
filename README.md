@@ -18,8 +18,9 @@ Next in a separate terminal window, run the following code to initiate the serve
 ```
 $ git clone git@github.com:JPStupfel/flatiron-phase-2-project-manager-server.git
 $ cd server
+$ cd json-server-template
 $ npm install
-$ npm run server
+$ npm run dev
 ```
 
 # Outline of Functionality of site
