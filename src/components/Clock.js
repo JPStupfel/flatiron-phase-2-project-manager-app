@@ -2,60 +2,49 @@ import React, {useEffect, useState} from "react";
 
 export default function Clock(){
 
-    const [isClock, setIsClock] = useState(false)
-    const [showClock, setShowClock] = useState(false)
     const [time, setTime] = useState(0)
+    const [showClock, setShowClock] = useState(false)
+    const [isRunning, setIsRunning] = useState(false)
+
+    const pauseButton = <button onClick={()=>{setIsRunning(false)}}>Pause</button>
+
+    function count(){
+       setTime((prev)=>prev+1)
+    }
 
 
-    function handleStart(event){
-        setIsClock(true)
-        setShowClock(true)
-
-    }
-    function handleStop(event){
-        setIsClock(false)
-        setShowClock(false)
-        setTime(0)
-        
-        
-    }
-    function handlePause(event){
-        setIsClock(false)
-    }
 
     useEffect(
-        ()=>{
-            if (showClock && isClock){
-                setTimeout(()=>setTime(time+1),1000,time); 
-            }
-            else if (!showClock && !isClock) {setTime(0)}
-        }, [isClock, time]
+        ()=>{ 
+            if (isRunning)
+            {setTimeout(count,1000);
+            return clearTimeout()}
+            else if (!showClock){setTime(0)}
+
+    
+    }
+
+        ,[time, isRunning]
     )
-
-
-    // useEffect(
-    //      ()=>{
-    //         if (isClock){
-    //         setTimeout(()=>setTime(time+1), 1000)} 
-    //      }   
-    //     ,[time, isClock])
-
-        
 
 
 
     return(
         <div>
-            <div>{showClock? time : null}</div>
-            <button
-            onClick={!isClock ? handleStart : null}
-            >Start</button>
-            <button
-            onClick={isClock ? handleStop : null}
-            >Stop</button>
-            {isClock?<button onClick={showClock ? handlePause : null}>Pause</button> : <></>}
-           
+            <div>{showClock ? time : <></>}</div>
+            <button onClick={()=>{setShowClock(true); setIsRunning(true)}}>Start</button>
 
+            <button onClick={()=>{setIsRunning(false); setShowClock(false); setTime(0)}}>Stop</button>
+
+            {showClock ? pauseButton : <></>}
+
+          
         </div>
     )
 }
+
+/*
+isRunning
+showClock
+
+*/

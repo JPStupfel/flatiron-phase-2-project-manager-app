@@ -19,7 +19,7 @@ export default function NavBar({currentUser, handleLogout}) {
       <>
       <button onClick={handleNavButClick}>Change Navbar Color to {navColor? 'green' : 'red'}</button>
     <div style={{
-      'background-color': navColor?'red':'green'}}>
+      'backgroundColor': navColor?'red':'green'}}>
       <Nav fill variant="tabs" >
       <Nav.Item >
         <Nav.Link href="/" eventKey="/">HOME</Nav.Link>
