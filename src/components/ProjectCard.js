@@ -47,6 +47,7 @@ export default function ProjectCard({
             <DisplayProjectCard 
             handleDelete={handleDelete} 
             project={project} 
+            onEditProject={onEditProject}
             handleClickEdit={handleClickEdit}
             currentUser={currentUser}
             
