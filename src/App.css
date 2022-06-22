@@ -2,7 +2,7 @@
   display: inline-block; 
   width: 80%;
   height: 100%;
-  backgroundColor: beige;
+  background-color: beige;
 
   }
 
@@ -21,13 +21,21 @@
 }
 
 .add-something-button{
-  backgroundColor: aliceblue;
+  background-color: aliceblue;
   color: black;
   align-self: center;
   display: flex;
   justify-self: center;
   
   
+}
+
+.Nav-green{
+  background-color: rgb(90, 177, 35);
+}
+
+.Nav-red{
+  background-color: rgb(177, 35, 42);
 }
 
 

@@ -52,7 +52,6 @@ function App() {
 
     isUser || isAdmin ? setCurrentUser(newCurrentUser) : setCurrentUser('')
     
-    console.log(isUser)
   
   },[userList]
      

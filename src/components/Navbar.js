@@ -1,17 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 import Nav from 'react-bootstrap/Nav';
+import  '../App.css';
+
 
 
 export default function NavBar({currentUser, handleLogout}) {
     
+    const [navColor, setNavColor] = useState(true)
+
+    function handleNavButClick(event){
+    (prev =>setNavColor(!prev))(navColor)
+    console.log(navColor)
+    }
 
     return (
 
       <>
-
+      <button onClick={handleNavButClick}>Change Navbar Color to {navColor? 'green' : 'red'}</button>
+    <div style={{
+      'background-color': navColor?'red':'green'}}>
       <Nav fill variant="tabs" >
-      <Nav.Item>
+      <Nav.Item >
         <Nav.Link href="/" eventKey="/">HOME</Nav.Link>
       </Nav.Item>
 
@@ -37,7 +47,7 @@ export default function NavBar({currentUser, handleLogout}) {
         }
       </Nav.Item>
     </Nav>
-
+    </div>
 
         </>
           
