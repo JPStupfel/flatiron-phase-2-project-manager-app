@@ -17,15 +17,14 @@ export default function ProjectContainer({
 
 }){
     const [addProject, setAddProject] = useState(false)
-    const [searchText, setSearchText] = useState('')
 
-    const notCompleteProjects = projects.filter(e=>e.status !== 'Completed').filter(e=>e.name.toLowerCase().includes(searchText.toLowerCase()))
+    const notCompleteProjects = projects.filter(e=>e.status !== 'Completed')
 
     const projectCards = notCompleteProjects.map(
         e=>
         <ProjectCard
          key={e.id} 
-         project={e}
+         project={e}å
          onClickDeleteButton={onClickDeleteButton}
          onEditProject={onEditProject}
          userList={userList}
@@ -78,12 +77,11 @@ export default function ProjectContainer({
             setAddProject(false)
           }
 
-          //console.log(searchText)
+
 
     return(
         <div className='App'>
             <h1>Projects</h1>
-            <div>Search by name<input onChange={(event)=>setSearchText(event.target.value)}/></div>
             <h2 >On Hold</h2>
                 {onHoldCards}
             <h2>Ready to Start</h2>
